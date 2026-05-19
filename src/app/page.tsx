@@ -1,65 +1,1208 @@
-import Image from "next/image";
+export const metadata = {
+  title: "AirAlam - Kesegaran Alami Dalam Setiap Tetes",
+};
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <div>
+      <style>{`
+:root {
+  --blue-main: #1a8fe3;
+  --blue-light: #56c5f7;
+  --blue-dark: #0d5fa3;
+  --accent: #00d4ff;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Inter", sans-serif;
+  background: #f8fbff;
+  color: #1a2535;
+  overflow-x: hidden;
+}
+h1,
+h2,
+h3,
+.logo {
+  font-family: "Inter", sans-serif;
+}
+
+/* Navbar */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(26, 143, 227, 0.1);
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  box-shadow: 0 2px 20px rgba(26, 143, 227, 0.08);
+}
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1a8fe3, #00d4ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(26, 143, 227, 0.35);
+}
+.logo-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: white;
+}
+.logo-text {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a2535;
+  letter-spacing: -0.5px;
+}
+.logo-text span {
+  color: var(--blue-main);
+}
+.nav-links {
+  display: flex;
+  gap: 32px;
+}
+.nav-links a {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #4a5568;
+  text-decoration: none;
+  transition: color 0.2s;
+  position: relative;
+}
+.nav-links a.active,
+.nav-links a:hover {
+  color: var(--blue-main);
+}
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--blue-main);
+  border-radius: 2px;
+}
+
+/* Hero */
+.hero {
+  min-height: 100vh;
+  padding: 64px 5% 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  position: relative;
+  background: linear-gradient(160deg, #f0f9ff 0%, #e8f4fe 40%, #ddf0fd 100%);
+}
+
+.hero-content {
+  margin-bottom: 100px;
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.hero-image img {
+  width: 75%;
+  max-width: 500px;
+  transform: translateY(-40px);
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.15));
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 650px;
+  height: 650px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(86, 197, 247, 0.22) 0%,
+    rgba(86, 197, 247, 0.12) 30%,
+    rgba(86, 197, 247, 0.05) 55%,
+    transparent 80%
+  );
+  filter: blur(35px);
+  opacity: 0.9;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -80px;
+  width: 100%;
+  height: 268px;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(240, 249, 255, 0) 0%,
+    rgba(240, 249, 255, 0.35) 25%,
+    rgba(248, 251, 255, 0.75) 55%,
+    rgba(255, 255, 255, 0.95) 80%,
+    #ffffff 100%
+  );
+  filter: blur(45px);
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(26, 143, 227, 0.1);
+  color: var(--blue-main);
+  border: 1px solid rgba(26, 143, 227, 0.25);
+  border-radius: 99px;
+  padding: 5px 14px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  margin: 20px 2px;
+  animation: fadeInUp 0.6s ease both;
+}
+.hero-badge::before {
+  font-size: 0.6rem;
+}
+.hero h1 {
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: #1a2535;
+  letter-spacing: -2px;
+  animation: fadeInUp 0.7s ease 0.1s both;
+}
+
+.hero h1 span {
+  background: linear-gradient(120deg, #1a8fe3, #00c4f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero-desc {
+  margin-top: 18px;
+  font-size: 0.97rem;
+  color: #5a6a7e;
+  line-height: 1.7;
+  max-width: 380px;
+  animation: fadeInUp 0.7s ease 0.2s both;
+}
+.hero-btns {
+  margin-top: 32px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  animation: fadeInUp 0.7s ease 0.3s both;
+}
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #1a8fe3, #0d73c7);
+  color: white;
+  border: none;
+  border-radius: 99px;
+  padding: 13px 26px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(26, 143, 227, 0.38);
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(26, 143, 227, 0.45);
+}
+.btn-primary svg {
+  width: 16px;
+  height: 16px;
+}
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: white;
+  color: #1a2535;
+  border: 1.5px solid #d0dde8;
+  border-radius: 99px;
+  padding: 13px 26px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    border-color 0.2s,
+    color 0.2s,
+    transform 0.2s;
+}
+.btn-secondary:hover {
+  border-color: var(--blue-main);
+  color: var(--blue-main);
+  transform: translateY(-2px);
+}
+
+/* Stats strip */
+.stats-strip {
+  display: flex;
+  gap: 40px;
+  margin-top: 48px;
+  animation: fadeInUp 0.7s ease 0.4s both;
+}
+.stat {
+  display: flex;
+  flex-direction: column;
+}
+.stat-num {
+  font-family: "Sora", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #1a2535;
+}
+.stat-num span {
+  color: var(--blue-main);
+}
+.stat-label {
+  font-size: 0.78rem;
+  color: #7a8fa6;
+  margin-top: 2px;
+}
+
+/* Why section */
+.section-why {
+  padding: 70px 5%;
+  background: #fcfeff;
+}
+
+.why-container {
+  max-width: 1300px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+
+  gap: 35px;
+  align-items: center;
+}
+
+.why-image {
+  position: relative;
+  width: 85%;
+  height: 645px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.1);
+}
+
+.why-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.why-content {
+  width: 100%;
+}
+
+.why-content h2 {
+  font-size: 3rem;
+  line-height: 1.1;
+  font-weight: 800;
+  color: #1b2433;
+  margin-bottom: 22px;
+  letter-spacing: -2px;
+}
+
+.why-content p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #64748b;
+  margin-bottom: 32px;
+  max-width: 100%;
+}
+
+.why-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.why-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.check-icon {
+  min-width: 28px;
+  min-height: 28px;
+
+  border-radius: 50%;
+  border: 2px solid #2492ff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 2px;
+}
+
+.check-icon svg {
+  width: 14px;
+  height: 14px;
+  stroke: #2492ff;
+  stroke-width: 3;
+  fill: none;
+}
+
+.why-item span,
+.why-item p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #5f6f89;
+  margin: 0;
+}
+
+/* Product */
+.products-section {
+  padding: 80px 5%;
+  background: #ffffff;
+}
+
+.products-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.products-header h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 14px;
+  letter-spacing: -1px;
+}
+
+.products-header p {
+  font-size: 1rem;
+  color: #64748b;
+}
+
+.products-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.product-card {
+  background: #f4f9fd;
+  border-radius: 22px;
+  padding: 22px;
+  transition: 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+}
+
+.product-image {
+  width: 100%;
+  height: 280px;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.product-content {
+  margin-top: 26px;
+}
+
+.product-content h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 12px;
+}
+
+.product-volume {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1d9bf0;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.product-content p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #64748b;
+  margin-bottom: 26px;
+}
+
+.product-content a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1d9bf0;
+  transition: 0.2s;
+}
+
+.product-content a:hover {
+  gap: 12px;
+}
+
+.products-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.products-button a {
+  background: linear-gradient(135deg, #3ba3f5, #1d8ef0);
+  color: white;
+  text-decoration: none;
+  padding: 16px 34px;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: 0.3s ease;
+  box-shadow: 0 10px 24px rgba(29, 142, 240, 0.25);
+}
+
+.products-button a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 30px rgba(29, 142, 240, 0.3);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 992px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .products-header h2 {
+    font-size: 2.4rem;
+  }
+}
+
+/* Features */
+.section-features {
+  padding: 80px 5%;
+  background: white;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 14px;
+  letter-spacing: -1px;
+}
+
+.section-header p {
+  font-size: 1rem;
+  color: #64748b;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 56px;
+}
+.feature-card {
+  padding: 28px 24px;
+  border-radius: 18px;
+  background: #f8fbff;
+  border: 1px solid rgba(26, 143, 227, 0.1);
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(26, 143, 227, 0.12);
+}
+.feature-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #1a8fe3, #00c4f0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  box-shadow: 0 6px 16px rgba(26, 143, 227, 0.3);
+}
+.feature-icon svg {
+  width: 22px;
+  height: 22px;
+  stroke: white;
+  fill: none;
+  stroke-width: 2;
+}
+.feature-card h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1a2535;
+  margin-bottom: 8px;
+}
+.feature-card p {
+  font-size: 0.83rem;
+  color: #7a8fa6;
+  line-height: 1.6;
+}
+
+/* Testimoni */
+.testimonial-section {
+  padding: 90px 5%;
+  background: #f4f8fb;
+}
+
+.testimonial-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.testimonial-header h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 14px;
+  letter-spacing: -1px;
+}
+
+.testimonial-header p {
+  font-size: 1rem;
+  color: #64748b;
+}
+
+.testimonial-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 34px;
+}
+
+.testimonial-card {
+  background: #ffffff;
+  padding: 30px 30px;
+  border-radius: 28px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+}
+
+.stars {
+  font-size: 1.6rem;
+  color: #f5b301;
+  margin-bottom: 20px;
+  letter-spacing: 4px;
+}
+
+.testimonial-text {
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: #64748b;
+  font-style: italic;
+  margin-bottom: 40px;
+}
+
+.testimonial-user h3 {
+  font-size: 1.7rem;
+  color: #1e293b;
+  margin-bottom: 5px;
+}
+
+.testimonial-user span {
+  font-size: 1.05rem;
+  color: #64748b;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .testimonial-container {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-header h2 {
+    font-size: 3rem;
+  }
+}
+
+/* CTA section */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.cta-section {
+  width: 100%;
+  padding: 0;
+}
+
+.cta-container {
+  width: 100%;
+  background: linear-gradient(to right, #339af0, #5cb8ff);
+  text-align: center;
+  padding: 146px 20px;
+}
+
+.cta-container h2 {
+  color: white;
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 28px;
+  line-height: 1.2;
+}
+
+.cta-container p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.35rem;
+  line-height: 1.7;
+  max-width: 850px;
+  margin: 0 auto 50px;
+}
+
+.cta-button {
+  display: inline-block;
+  background: white;
+  color: #339af0;
+  padding: 18px 42px;
+  border-radius: 999px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer */
+footer {
+  background: #0d1b2e;
+  color: white;
+  padding: 64px 5% 32px;
+}
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.footer-brand p {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.7;
+  margin-top: 14px;
+}
+.footer-col h4 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 16px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.footer-col a {
+  display: block;
+  font-size: 0.83rem;
+  color: rgba(255, 255, 255, 0.45);
+  text-decoration: none;
+  margin-bottom: 10px;
+  transition: color 0.2s;
+}
+.footer-col a:hover {
+  color: var(--blue-light);
+}
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 32px;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-18px);
+  }
+}
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 0.7;
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes ripple {
+  0% {
+    transform: scale(0.7);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 80px;
+    text-align: center;
+  }
+  .hero-visual {
+    height: 300px;
+  }
+  .hero-badge,
+  .hero-desc,
+  .hero-btns,
+  .stats-strip {
+    margin-inline: auto;
+  }
+  .hero-btns {
+    justify-content: center;
+  }
+  .stats-strip {
+    justify-content: center;
+  }
+  .section-why,
+  .products-grid,
+  .features-grid,
+  .process-steps,
+  .footer-top {
+    grid-template-columns: 1fr;
+  }
+  .process-steps::before {
+    display: none;
+  }
+}
+      `}</style>
+      <nav>
+        <div className="logo-wrap">
+          <div className="logo-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C12 2 5 10 5 15a7 7 0 0014 0c0-5-7-13-7-13z" />
+            </svg>
+          </div>
+          <span className="logo-text">
+            Air<span>Alam</span>
+          </span>
+        </div>
+        <div className="nav-links">
+          <a href="/" className="active">
+            Home
+          </a>
+          <a href="/tentang">Tentang</a>
+          <a href="/brand">Brand</a>
+          <a href="/produk">Produk</a>
+          <a href="/#kontak">Kontak</a>
+        </div>
+      </nav>
+
+      <section className="hero">
+        <div className="hero-content">
+          <div className="hero-badge">Natural Freshness Everyday</div>
+          <h1>
+            Kesegaran Alami<br />
+            <span>Dalam Setiap Tetes</span>
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="hero-desc">
+            AirAlam menghadirkan air minum berkualitas dengan kemurnian alami
+            untuk gaya hidup sehat dan modern.
           </p>
+          <div className="hero-btns">
+            <a href="#produk" className="btn-primary">
+              Lihat Produk
+              <svg
+                viewBox="0 0 16 16"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.5"
+              >
+                <path d="M3 8h10M9 4l4 4-4 4" />
+              </svg>
+            </a>
+            <a href="/tentang" className="btn-secondary">
+              Tentang Kami
+            </a>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
+        <div className="hero-image">
+          <img src="/botol-hero.png" alt="AirAlam Bottle" />
+        </div>
+        <div className="hero-visual">
+          <div className="bottle-container"></div>
+        </div>
+      </section>
+
+      <section className="section-why" id="tentang">
+        <div className="why-container">
+          <div className="why-image">
+            <img src="/gambar8.jpeg" alt="AirAlam Bottle" />
+          </div>
+          <div className="why-content">
+            <h2>
+              Mengapa Memilih
+              <br />
+              AirAlam?
+            </h2>
+            <p>
+              AirAlam bukan sekadar air minum. Kami adalah komitmen untuk
+              memberikan yang terbaik bagi kesehatan Anda dan keluarga. Setiap
+              botol diproduksi dengan standar tertinggi dan penuh perhatian
+              terhadap detail.
+            </p>
+            <div className="why-list">
+              <div className="why-item">
+                <div className="check-icon">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M6 12l4 4 8-8" />
+                  </svg>
+                </div>
+                <p>Sumber air alami terpilih dari pegunungan Indonesia</p>
+              </div>
+              <div className="why-item">
+                <div className="check-icon">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M6 12l4 4 8-8" />
+                  </svg>
+                </div>
+                <p>Proses penyaringan 7 tahap dengan teknologi modern</p>
+              </div>
+              <div className="why-item">
+                <div className="check-icon">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M6 12l4 4 8-8" />
+                  </svg>
+                </div>
+                <p>Kemasan BPA-free yang aman dan ramah lingkungan</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-features">
+        <div className="section-header">
+          <h2>Nilai-Nilai Kami</h2>
+          <p>Komitmen kami untuk memberikan yang terbaik dalam setiap aspek</p>
+        </div>
+        <div className="features-grid">
+          <div className="feature-card">
+            <div className="feature-icon">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 2C12 2 5 10 5 15a7 7 0 0014 0c0-5-7-13-7-13z"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </div>
+            <h3>Murni</h3>
+            <p>Air dari sumber alami dengan proses penyaringan modern.</p>
+          </div>
+          <div className="feature-card">
+            <div className="feature-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 3l1.5 4.5H18l-3.5 2.5 1.5 4.5L12 12l-4 2.5 1.5-4.5L6 7.5h4.5z" />
+              </svg>
+            </div>
+            <h3>Menyegarkan</h3>
+            <p>Rasa segar alami yang memanjakan setiap tegukan.</p>
+          </div>
+          <div className="feature-card">
+            <div className="feature-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            </div>
+            <h3>Higienis</h3>
+            <p>Standar kebersihan internasional di setiap tahap produksi.</p>
+          </div>
+          <div className="feature-card">
+            <div className="feature-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M19 3C13 3 7 7 7 13c0 4 3 7 7 7 6 0 10-6 10-12V3h-5z" />
+                <path d="M7 13c2 0 5-1 8-4" />
+              </svg>
+            </div>
+            <h3>Ramah Lingkungan</h3>
+            <p>Kemasan recyclable untuk masa depan yang lebih hijau.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="products-section" id="produk">
+        <div className="products-header">
+          <h2>Produk Pilihan</h2>
+          <p>Berbagai ukuran untuk memenuhi kebutuhan Anda</p>
+        </div>
+
+        <div className="products-grid">
+          <div className="product-card">
+            <div className="product-image">
+              <img src="/330ml.png" alt="AirAlam 330ml" />
+            </div>
+            <div className="product-content">
+              <h3>AirAlam 330ml</h3>
+              <span className="product-volume">330ml</span>
+              <p>Perfect untuk aktivitas harian</p>
+              <a href="#"> Lihat Detail </a>
+            </div>
+          </div>
+
+          <div className="product-card">
+            <div className="product-image">
+              <img src="/500ml.png" alt="AirAlam 500ml" />
+            </div>
+            <div className="product-content">
+              <h3>AirAlam 500ml</h3>
+              <span className="product-volume">500ml</span>
+              <p>Pilihan tepat untuk olahraga</p>
+              <a href="#"> Lihat Detail </a>
+            </div>
+          </div>
+
+          <div className="product-card">
+            <div className="product-image">
+              <img src="/600ml.png" alt="AirAlam 600ml" />
+            </div>
+            <div className="product-content">
+              <h3>AirAlam 600ml</h3>
+              <span className="product-volume">600ml</span>
+              <p>Ekonomis untuk keluarga</p>
+              <a href="#"> Lihat Detail </a>
+            </div>
+          </div>
+
+          <div className="product-card">
+            <div className="product-image">
+              <img src="/1500ml.png" alt="AirAlam 1.5L" />
+            </div>
+            <div className="product-content">
+              <h3>AirAlam 1.5L</h3>
+              <span className="product-volume">1500ml</span>
+              <p>Ekonomis untuk keluarga</p>
+              <a href="#"> Lihat Detail </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="products-button">
+          <a href="#">Lihat Semua Produk</a>
+        </div>
+      </section>
+
+      <section className="testimonial-section">
+        <div className="testimonial-header">
+          <h2>Apa Kata Mereka</h2>
+          <p>Testimoni dari pelanggan setia AirAlam</p>
+        </div>
+
+        <div className="testimonial-container">
+          <div className="testimonial-card">
+            <div className="stars">★★★★★</div>
+            <p className="testimonial-text">
+              "AirAlam adalah pilihan terbaik untuk gaya hidup sehat saya.
+              Rasanya fresh dan kemasannya premium!"
+            </p>
+            <div className="testimonial-user">
+              <h3>Sarah Wijaya</h3>
+              <span>Lifestyle Blogger</span>
+            </div>
+          </div>
+
+          <div className="testimonial-card">
+            <div className="stars">★★★★★</div>
+            <p className="testimonial-text">
+              "Saya selalu membawa AirAlam saat workout. Sangat menyegarkan dan
+              praktis."
+            </p>
+            <div className="testimonial-user">
+              <h3>Budi Santoso</h3>
+              <span>Fitness Enthusiast</span>
+            </div>
+          </div>
+
+          <div className="testimonial-card">
+            <div className="stars">★★★★★</div>
+            <p className="testimonial-text">
+              "Kantor kami sudah beralih ke AirAlam. Kualitas terjamin dan tim
+              sangat puas."
+            </p>
+            <div className="testimonial-user">
+              <h3>Linda Chen</h3>
+              <span>Corporate Manager</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="cta-section">
+        <div className="cta-container">
+          <h2>Siap Untuk Hidup Lebih Sehat?</h2>
+          <p>
+            Bergabunglah dengan ribuan orang yang telah memilih AirAlam sebagai
+            bagian dari gaya hidup sehat mereka
+          </p>
+          <a href="#" className="cta-button">
+            Hubungi Kami Sekarang
           </a>
         </div>
-      </main>
+      </section>
+
+      <footer id="kontak">
+        <div className="footer-top">
+          <div className="footer-brand">
+            <div className="logo-wrap" style={{ marginBottom: 8 }}>
+              <div className="logo-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12 2C12 2 5 10 5 15a7 7 0 0014 0c0-5-7-13-7-13z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+              <span className="logo-text" style={{ color: "white" }}>
+                Air<span>Alam</span>
+              </span>
+            </div>
+            <p>
+              Menghadirkan kesegaran alami dari pegunungan Indonesia langsung ke
+              keluarga Anda setiap hari.
+            </p>
+          </div>
+          <div className="footer-col">
+            <h4>Perusahaan</h4>
+            <a href="#">Tentang Kami</a>
+            <a href="#">Visi & Misi</a>
+            <a href="#">Karir</a>
+            <a href="#">Blog</a>
+          </div>
+          <div className="footer-col">
+            <h4>Produk</h4>
+            <a href="#">AirAlam Mini</a>
+            <a href="#">AirAlam Regular</a>
+            <a href="#">AirAlam Galon</a>
+            <a href="#">Produk Bisnis</a>
+          </div>
+          <div className="footer-col">
+            <h4>Kontak</h4>
+            <a href="#">
+              <i className="fa-solid fa-location-dot"></i>&nbsp;&nbsp; Surabaya,
+              Jawa Timur
+            </a>
+            <a href="#">
+              <i className="fa-solid fa-phone"></i>&nbsp;&nbsp; 0800-123-4567
+            </a>
+            <a href="#">
+              <i className="fa-solid fa-envelope"></i>&nbsp;&nbsp; halo@airalam.id
+            </a>
+            <a href="#">
+              <i className="fa-solid fa-globe"></i>&nbsp;&nbsp; www.airalam.id
+            </a>
+          </div>
+        </div>
+        <div className="footer-bottom">
+          <span>(c) 2025 AirAlam. Semua hak dilindungi.</span>
+          <span>Natural Freshness Everyday</span>
+        </div>
+      </footer>
     </div>
   );
 }

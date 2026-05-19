@@ -1,0 +1,1093 @@
+export const metadata = {
+  title: "AirAlam - Brand",
+};
+
+export default function BrandPage() {
+  return (
+    <div>
+      <style>{`
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #fff;
+  color: #172033;
+}
+
+/* Navbar & Hero Section Start */
+.hero {
+  height: 70vh;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.92) 0%,
+      rgba(255, 255, 255, 0.72) 38%,
+      rgba(255, 255, 255, 0.15) 58%,
+      rgba(0, 0, 0, 0.08) 100%
+    ),
+    url("/botol-hero.png");
+  background-size: cover;
+  background-position: center;
+  padding: 24px 70px;
+  position: relative;
+  overflow: hidden;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 78px;
+  padding: 0 90px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  z-index: 9999;
+  box-shadow: 0 8px 28px rgba(15, 23, 42, 0.06);
+}
+
+.nav-logo {
+  font-family: "Outfit", sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  color: #172033;
+  text-decoration: none;
+  letter-spacing: -1px;
+}
+
+.nav-logo span {
+  color: #5197f1;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+  background: transparent;
+  padding: 0;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.nav-menu a {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  text-decoration: none;
+  color: #1f2937;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 0;
+  border-radius: 0;
+  transition: 0.3s ease;
+}
+
+.nav-menu a.active,
+.nav-menu a:hover {
+  background: transparent;
+  color: #5197f1;
+}
+
+.nav-search {
+  text-decoration: none;
+  color: #172033;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-search span {
+  font-size: 31px;
+  font-weight: 600;
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 1000px;
+  margin: 160px auto 0;
+  position: relative;
+  z-index: 2;
+}
+
+h1 {
+  font-family: "Outfit", sans-serif;
+  font-size: clamp(42px, 6vw, 72px);
+  line-height: 1.05;
+  color: #111;
+  font-weight: 700;
+  letter-spacing: -3px;
+  margin-bottom: 20px;
+  text-shadow: 0 4px 18px rgba(255, 255, 255, 0.45);
+}
+
+.blue-text {
+  font-family: "Allura", cursive;
+  font-size: 1.2em;
+  font-weight: normal;
+
+  background: linear-gradient(90deg, #5b7cff, #8fe3ff);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  letter-spacing: 1px;
+
+  text-shadow:
+    0 2px 8px rgba(91, 124, 255, 0.35),
+    0 4px 18px rgba(143, 227, 255, 0.28),
+    0 0 30px rgba(143, 227, 255, 0.22);
+
+  opacity: 0.98;
+}
+
+.desc {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 14px;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.92);
+  max-width: 880px;
+  margin: auto;
+  font-weight: 500;
+}
+
+/* Navbar & Hero Section End */
+
+/* Filosofi Brand Section Start */
+.brand-philosophy-section {
+  background: #ffffff;
+  padding: 110px 70px 120px;
+}
+
+.brand-philosophy-heading {
+  max-width: 1180px;
+  margin: 0 auto 55px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 18px;
+}
+
+.brand-philosophy-heading span {
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(23, 32, 51, 0.25));
+}
+
+.brand-philosophy-heading span:last-child {
+  background: linear-gradient(to left, transparent, rgba(23, 32, 51, 0.25));
+}
+
+.brand-philosophy-heading h2 {
+  font-family: "Outfit", sans-serif;
+  font-size: 34px;
+  color: #172033;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.brand-philosophy-card {
+  max-width: 850px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1.08fr;
+  background: #4f78a8;
+  box-shadow: 0 26px 60px rgba(15, 23, 42, 0.16);
+  overflow: hidden;
+}
+
+.brand-philosophy-image {
+  min-height: 390px;
+}
+
+.brand-philosophy-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.brand-philosophy-content {
+  padding: 48px 46px;
+  background: linear-gradient(135deg, #2f5f92, #4f88c7);
+  color: white;
+}
+
+.brand-philosophy-content h3 {
+  font-family: "Outfit", sans-serif;
+  font-size: 29px;
+  line-height: 1.15;
+  margin-bottom: 24px;
+  font-weight: 800;
+}
+
+.brand-philosophy-content p {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.82);
+  margin-bottom: 18px;
+}
+
+.brand-tagline {
+  margin-top: 26px;
+  padding: 16px 20px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.16);
+  font-family: "Outfit", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .brand-philosophy-section {
+    padding: 80px 24px;
+  }
+
+  .brand-philosophy-card {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-philosophy-image {
+    min-height: 280px;
+  }
+
+  .brand-philosophy-content {
+    padding: 36px 28px;
+  }
+}
+
+/* Filosofi Brand Section End */
+
+/* CTA Brand Section Start */
+.brand-cta-section {
+  padding: 110px 70px;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(255, 255, 255, 0.18),
+      transparent 28%
+    ),
+
+    linear-gradient(135deg, #4f8fe8 0%, #7fa4d3 45%, #8797a8 100%);
+
+  position: relative;
+  overflow: hidden;
+}
+
+.brand-cta-section::before {
+  content: "";
+  position: absolute;
+
+  width: 320px;
+  height: 320px;
+
+  background: rgba(255, 255, 255, 0.1);
+
+  border-radius: 50%;
+
+  top: -120px;
+  right: -120px;
+
+  filter: blur(20px);
+}
+
+.brand-cta-section::after {
+  content: "";
+  position: absolute;
+
+  width: 240px;
+  height: 240px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border-radius: 50%;
+
+  bottom: -100px;
+  left: -80px;
+
+  filter: blur(25px);
+}
+
+.brand-cta-content {
+  max-width: 1050px;
+  margin: auto;
+
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.brand-cta-content h2 {
+  font-family: "Outfit", sans-serif;
+  font-size: clamp(42px, 5vw, 64px);
+  font-size: 64px;
+
+  line-height: 1.05;
+  letter-spacing: -2px;
+
+  color: #ffffff;
+  font-weight: 800;
+
+  margin-bottom: 24px;
+}
+
+.brand-cta-content p {
+  font-family: "Plus Jakarta Sans", sans-serif;
+
+  font-size: 18px;
+  line-height: 1.9;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  max-width: 850px;
+  margin: auto auto 38px;
+
+  font-weight: 500;
+}
+
+.brand-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 18px 38px;
+
+  border-radius: 999px;
+
+  background: #ffffff;
+  color: #3f7ddb;
+
+  text-decoration: none;
+
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+
+  transition: 0.35s ease;
+
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.18);
+}
+
+.brand-cta-btn:hover {
+  transform: translateY(-5px);
+
+  background: #172033;
+  color: #ffffff;
+
+  box-shadow: 0 24px 45px rgba(15, 23, 42, 0.28);
+}
+
+/* CTA Brand Section End */
+
+/* Footer Start */
+.footer {
+  position: relative;
+  overflow: hidden;
+
+  background:
+    radial-gradient(circle at top left, rgba(96, 165, 250, 0.18), transparent 30%),
+    linear-gradient(135deg, #111827 0%, #1e293b 45%, #334155 100%);
+
+  padding: 90px 70px 35px;
+}
+
+.footer-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.22;
+  pointer-events: none;
+}
+
+.footer-glow-1 {
+  width: 240px;
+  height: 240px;
+  background: #60a5fa;
+  top: -80px;
+  left: -80px;
+}
+
+.footer-glow-2 {
+  width: 260px;
+  height: 260px;
+  background: #7dd3fc;
+  bottom: -120px;
+  right: -90px;
+}
+
+.footer-container {
+  max-width: 1280px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr 0.9fr 1fr;
+  gap: 60px;
+
+  position: relative;
+  z-index: 2;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  margin-bottom: 24px;
+}
+
+.footer-logo-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 18px;
+
+  background: linear-gradient(135deg, #60a5fa, #7dd3fc);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 12px 30px rgba(96, 165, 250, 0.35);
+}
+
+.footer-logo-icon span {
+  color: #fff;
+  font-size: 30px;
+}
+
+.footer-logo h2 {
+  font-family: "Outfit", sans-serif;
+  font-size: 38px;
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.footer-brand p {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 18px;
+  line-height: 1.9;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  max-width: 320px;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.footer-socials a {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+
+  transition: 0.35s ease;
+}
+
+.footer-socials a span {
+  color: #ffffff;
+  font-size: 23px;
+}
+
+.footer-socials a:hover {
+  transform: translateY(-5px);
+  background: linear-gradient(135deg, #60a5fa, #7dd3fc);
+  box-shadow: 0 14px 30px rgba(96, 165, 250, 0.35);
+}
+
+.footer-links h3 {
+  font-family: "Outfit", sans-serif;
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 28px;
+}
+
+.footer-links a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 18px;
+
+  text-decoration: none;
+
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 17px;
+
+  color: rgba(255, 255, 255, 0.68);
+
+  transition: 0.3s ease;
+}
+
+.footer-links a span {
+  font-size: 21px;
+}
+
+.footer-links a:hover {
+  color: #7dd3fc;
+  transform: translateX(5px);
+}
+
+.footer-bottom {
+  max-width: 1280px;
+  margin: 60px auto 0;
+
+  position: relative;
+  z-index: 2;
+}
+
+.footer-line {
+  width: 100%;
+  height: 1px;
+
+  background:
+    linear-gradient(to right, transparent, rgba(255, 255, 255, 0.22), transparent);
+
+  margin-bottom: 28px;
+}
+
+.footer-bottom p {
+  text-align: center;
+
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 16px;
+
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* Footer End */
+
+/* Responsive Brand Page Start */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+@media (max-width: 1200px) {
+  .navbar {
+    padding: 0 42px;
+  }
+
+  .nav-menu {
+    gap: 28px;
+  }
+
+  .hero {
+    height: auto;
+    min-height: 72vh;
+    padding: 120px 42px 90px;
+  }
+
+  .hero-content {
+    margin: 95px auto 0;
+  }
+
+  .brand-philosophy-section,
+  .brand-cta-section,
+  .footer {
+    padding-left: 42px;
+    padding-right: 42px;
+  }
+
+  .brand-philosophy-card {
+    max-width: 920px;
+  }
+
+  .brand-cta-content h2 {
+    font-size: clamp(42px, 6vw, 58px);
+  }
+
+  .footer-container {
+    grid-template-columns: 1.2fr 0.8fr 0.9fr 1fr;
+    gap: 38px;
+  }
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    height: auto;
+    min-height: 72px;
+    padding: 14px 22px;
+    gap: 18px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .nav-logo {
+    font-size: 27px;
+  }
+
+  .nav-search {
+    display: none;
+  }
+
+  .nav-menu {
+    width: 100%;
+    order: 3;
+    display: flex;
+    justify-content: flex-start;
+    gap: 18px;
+    overflow-x: auto;
+    padding: 10px 2px 2px;
+    scrollbar-width: none;
+  }
+
+  .nav-menu::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-menu a {
+    font-size: 11px;
+    letter-spacing: 2px;
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+
+  .hero {
+    min-height: 76vh;
+    height: auto;
+    padding: 145px 24px 80px !important;
+    background-position: center;
+  }
+
+  .hero-content {
+    margin: 68px auto 0 !important;
+    max-width: 760px;
+  }
+
+  h1 {
+    font-size: clamp(42px, 11vw, 70px);
+    line-height: 0.98;
+    letter-spacing: -2px;
+  }
+
+  .blue-text {
+    display: inline-block;
+  }
+
+  .desc {
+    font-size: 15px;
+    line-height: 1.8;
+    max-width: 680px;
+  }
+
+  .brand-philosophy-section {
+    padding: 80px 24px 86px !important;
+  }
+
+  .brand-philosophy-heading {
+    margin-bottom: 42px;
+    gap: 14px;
+  }
+
+  .brand-philosophy-heading h2 {
+    font-size: 30px;
+    white-space: nowrap;
+  }
+
+  .brand-philosophy-card {
+    width: 100%;
+    max-width: 680px;
+    grid-template-columns: 1fr;
+    border-radius: 28px;
+  }
+
+  .brand-philosophy-image {
+    min-height: 310px;
+  }
+
+  .brand-philosophy-content {
+    padding: 38px 30px;
+  }
+
+  .brand-philosophy-content h3 {
+    font-size: 28px;
+  }
+
+  .brand-philosophy-content p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .brand-tagline {
+    font-size: 18px;
+    line-height: 1.35;
+  }
+
+  .brand-cta-section {
+    padding: 82px 24px !important;
+  }
+
+  .brand-cta-content h2 {
+    font-size: clamp(38px, 9vw, 54px);
+    letter-spacing: -1.6px;
+  }
+
+  .brand-cta-content p {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .brand-cta-btn {
+    padding: 16px 32px;
+    font-size: 17px;
+  }
+
+  .footer {
+    padding: 72px 24px 30px !important;
+  }
+
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 38px;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .footer-brand p {
+    max-width: 620px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 12px 16px;
+  }
+
+  .nav-logo {
+    font-size: 25px;
+  }
+
+  .nav-menu {
+    gap: 16px;
+  }
+
+  .hero {
+    min-height: 78vh;
+    padding: 135px 18px 70px !important;
+  }
+
+  .hero-content {
+    margin-top: 54px !important;
+  }
+
+  h1 {
+    font-size: clamp(44px, 15vw, 62px);
+    letter-spacing: -2px;
+  }
+
+  .desc {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .brand-philosophy-section,
+  .brand-cta-section,
+  .footer {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  .brand-philosophy-heading {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 12px;
+    margin-bottom: 34px;
+  }
+
+  .brand-philosophy-heading span {
+    width: 90px;
+    margin: auto;
+  }
+
+  .brand-philosophy-heading h2 {
+    font-size: 32px;
+  }
+
+  .brand-philosophy-card {
+    border-radius: 22px;
+    box-shadow: 0 18px 42px rgba(15, 23, 42, 0.14);
+  }
+
+  .brand-philosophy-image {
+    min-height: 260px;
+  }
+
+  .brand-philosophy-content {
+    padding: 32px 24px;
+  }
+
+  .brand-philosophy-content h3 {
+    font-size: 25px;
+  }
+
+  .brand-philosophy-content p {
+    font-size: 14px;
+  }
+
+  .brand-tagline {
+    font-size: 16px;
+    padding: 14px 16px;
+  }
+
+  .brand-cta-section {
+    padding-top: 72px !important;
+    padding-bottom: 76px !important;
+  }
+
+  .brand-cta-content h2 {
+    font-size: 36px;
+  }
+
+  .brand-cta-content p {
+    font-size: 15px;
+    margin-bottom: 30px;
+  }
+
+  .brand-cta-btn {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .footer-logo h2 {
+    font-size: 30px;
+  }
+
+  .footer-brand p,
+  .footer-links a {
+    font-size: 15px;
+  }
+
+  .footer-bottom {
+    margin-top: 42px;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero {
+    min-height: 82vh;
+  }
+
+  h1 {
+    font-size: 44px;
+  }
+
+  .blue-text {
+    font-size: 1.12em;
+  }
+
+  .brand-philosophy-heading h2,
+  .brand-cta-content h2 {
+    font-size: 32px;
+  }
+
+  .brand-philosophy-image {
+    min-height: 230px;
+  }
+
+  .brand-philosophy-content h3 {
+    font-size: 23px;
+  }
+}
+/* Responsive Brand Page End */
+      `}</style>
+
+      <section className="hero">
+        <nav className="navbar">
+          <a href="/" className="nav-logo">
+            Air<span>Alam</span>
+          </a>
+
+          <div className="nav-menu">
+            <a href="/">Home</a>
+            <a href="/tentang">Tentang</a>
+            <a href="/brand" className="active">
+              Brand
+            </a>
+            <a href="/produk">Produk</a>
+            <a href="/#kontak">Kontak</a>
+          </div>
+
+          <a href="#" className="nav-search">
+            <span className="material-icons-round">search</span>
+          </a>
+        </nav>
+
+        <div className="hero-content">
+          <h1>
+            Brand <span className="blue-text">AirAlam</span>
+          </h1>
+
+          <p className="desc">
+            Identitas visual yang mencerminkan nilai kesegaran, kemurnian, dan
+            kualitas premium dari AirAlam.
+          </p>
+        </div>
+      </section>
+
+      <section className="brand-philosophy-section">
+        <div className="brand-philosophy-heading">
+          <span></span>
+          <h2>Filosofi Brand</h2>
+          <span></span>
+        </div>
+
+        <div className="brand-philosophy-card">
+          <div className="brand-philosophy-image">
+            <img src="/2.png" alt="Filosofi Brand AirAlam" />
+          </div>
+
+          <div className="brand-philosophy-content">
+            <h3>FILOSOFI BRAND AIRALAM</h3>
+
+            <p>
+              AirAlam lahir dari keyakinan bahwa air minum berkualitas adalah hak
+              setiap orang. Nama "AirAlam" menggambarkan kesegaran alami,
+              kemurnian, dan keindahan alam Indonesia.
+            </p>
+
+            <p>
+              Identitas visual kami dirancang untuk mencerminkan nilai-nilai
+              inti: kesegaran, kemurnian, dan kepedulian terhadap alam. Setiap
+              elemen desain dipilih dengan cermat untuk mengkomunikasikan
+              komitmen kami terhadap kualitas premium dan keberlanjutan.
+            </p>
+
+            <div className="brand-tagline">"Natural Freshness Everyday"</div>
+          </div>
+        </div>
+      </section>
+
+      <section className="brand-cta-section">
+        <div className="brand-cta-content">
+          <h2>Ingin Tahu Lebih Lanjut tentang Brand Kami?</h2>
+
+          <p>
+            Hubungi tim kami untuk informasi lebih detail mengenai brand
+            guidelines dan kerjasama
+          </p>
+
+          <a href="#" className="brand-cta-btn">
+            Hubungi Kami
+          </a>
+        </div>
+      </section>
+
+      <footer className="footer">
+        <div className="footer-glow footer-glow-1"></div>
+        <div className="footer-glow footer-glow-2"></div>
+
+        <div className="footer-container">
+          <div className="footer-brand">
+            <div className="footer-logo">
+              <div className="footer-logo-icon">
+                <span className="material-icons-round">water_drop</span>
+              </div>
+              <h2>AirAlam</h2>
+            </div>
+
+            <p>
+              Kesegaran alami dalam setiap tetes untuk gaya hidup sehat, modern,
+              dan penuh keseimbangan.
+            </p>
+
+            <div className="footer-socials">
+              <a href="#">
+                <span className="material-icons-round">language</span>
+              </a>
+              <a href="#">
+                <span className="material-icons-round">photo_camera</span>
+              </a>
+              <a href="#">
+                <span className="material-icons-round">smart_display</span>
+              </a>
+            </div>
+          </div>
+
+          <div className="footer-links">
+            <h3>Menu</h3>
+            <a href="/">Home</a>
+            <a href="/tentang">Tentang</a>
+            <a href="/brand">Brand</a>
+            <a href="/produk">Produk</a>
+          </div>
+
+          <div className="footer-links">
+            <h3>Produk</h3>
+            <a href="#">AirAlam 330ml</a>
+            <a href="#">AirAlam 600ml</a>
+            <a href="#">AirAlam 1.5L</a>
+            <a href="#">AirAlam Eco+</a>
+          </div>
+
+          <div className="footer-links footer-contact">
+            <h3>Hubungi Kami</h3>
+
+            <a href="#">
+              <span className="material-icons-round">mail</span>
+              info@airalam.co.id
+            </a>
+
+            <a href="#">
+              <span className="material-icons-round">call</span>
+              0858-99999-252
+            </a>
+
+            <a href="#">
+              <span className="material-icons-round">photo_camera</span>
+              @airalamid
+            </a>
+
+            <a href="#">
+              <span className="material-icons-round">location_on</span>
+              Tangerang, Indonesia
+            </a>
+          </div>
+        </div>
+
+        <div className="footer-bottom">
+          <div className="footer-line"></div>
+
+          <p>(c) 2026 AirAlam. Natural Freshness Everyday.</p>
+        </div>
+      </footer>
+    </div>
+  );
+}
