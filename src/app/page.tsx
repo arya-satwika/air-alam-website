@@ -1,3 +1,5 @@
+import Navbar from "@/components/navbar";
+
 export const metadata = {
   title: "AirAlam - Kesegaran Alami Dalam Setiap Tetes",
 };
