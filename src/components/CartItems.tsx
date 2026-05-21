@@ -25,7 +25,6 @@ export default function CartItem({ itemId, initialQuantity }: CartItemProps) {
     setIsLoaded(true);
   }, []);
 
-  // Regular functions. Fresh every render. Who cares? Not the DOM.
   const updateItemQuantity = (newQuantity: number) => {
     setCartItems((prev) => {
       const updated = prev.map((item) =>
