@@ -12,11 +12,16 @@ export default function CheckoutPage() {
         ]
         localStorage.setItem('cart', JSON.stringify(dummyCart))
     }
-
+    // src logo bank
+    const bniLogo = "https://upload.wikimedia.org/wikipedia/commons/f/f0/Bank_Negara_Indonesia_logo_(2004).svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+    const bcaLogo = "https://upload.wikimedia.org/wikipedia/commons/5/5c/Bank_Central_Asia.svg"
+    const mandiriLogo = "https://upload.wikimedia.org/wikipedia/commons/a/ad/Bank_Mandiri_logo_2016.svg"
+    const briLogo = "https://upload.wikimedia.org/wikipedia/commons/6/68/BANK_BRI_logo.svg"
+    const ovoLogo = "https://upload.wikimedia.org/wikipedia/commons/e/eb/Logo_ovo_purple.svg"
+    const shopeePayLogo = "https://upload.wikimedia.org/wikipedia/commons/0/0e/Shopee_logo.svg"
 
     return (
         <div>
-            {/* <button  className="text-6xl text-amber-50" onClick={addDummyCartItems}>Add Dummy Cart Items</button> */}
             <nav className="fixed z-50 bg-white/90 backdrop-blur-[12px] border-b border-[#1A8FE31A] px-1 flex items-center justify-between top-0 left-0 right-0 px-[5%] gap-4 w-full h-16 ">
                 <div className="flex items-center gap-6">
                     <div className="w-[38px] h-[38px] rounded-full flex items-center justify-center bg-gradient-to-br from-[#1a8fe3] to-[#00d4ff] shadow-[0_4px_12px_rgba(26,143,227,0.35)]">
@@ -45,7 +50,7 @@ export default function CheckoutPage() {
                 </div>
             </nav>
 
-            <section className="max-w-6xl mx-auto px-5 lg:px-8 pt-28 pb-10">
+            <section className="max-w-6xl mx-auto px-5 lg:px-8 pt-28 pb-10 bg-gray-100">
                 <div className="mb-10">
                     <h1 className="text-[32px] font-extrabold text-[#1b2433] leading-none">Checkout</h1>
                     <p className="text-[15px] text-slate-500 mt-3">Selesaikan pembayaran Anda</p>
@@ -99,7 +104,7 @@ export default function CheckoutPage() {
                                     <div className="payment-card border-2 border-[#DBEAFE] bg-white rounded-3xl p-6 cursor-pointer transition-all duration-300" data-type="bank" data-id="bca">
                                         <div className="flex items-center gap-5">
                                             <div className="w-14 h-14 rounded-2xl bg-[#EDF5FF] flex items-center justify-center">
-                                                <Image src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Bank_Central_Asia.svg" width={300} height={100} alt="BCA" className="w-8 object-contain" />
+                                                <Image src={bcaLogo} width={300} height={100} alt="BCA" className="w-8 object-contain" />
                                             </div>
                                             <div>
                                                 <h3 className="text-[20px] font-bold text-[#1b2433]">Bank BCA</h3>
@@ -114,7 +119,7 @@ export default function CheckoutPage() {
                                     <div className="payment-card border-2 border-[#DBEAFE] bg-white rounded-3xl p-6 cursor-pointer transition-all duration-300" data-type="bank" data-id="mandiri">
                                         <div className="flex items-center gap-5">
                                             <div className="w-14 h-14 rounded-2xl bg-[#EDF5FF] flex items-center justify-center">
-                                                <Image src="https://logo.clearbit.com/bankmandiri.co.id" width={200} height={100} alt="Mandiri" className="w-8 object-contain" />
+                                                <Image src={mandiriLogo} width={200} height={100} alt="Mandiri" className="w-8 object-contain" />
                                             </div>
                                             <div>
                                                 <h3 className="text-[20px] font-bold text-[#1b2433]">Bank Mandiri</h3>
@@ -129,7 +134,7 @@ export default function CheckoutPage() {
                                     <div className="payment-card border-2 border-[#DBEAFE] bg-white rounded-3xl p-6 cursor-pointer transition-all duration-300" data-type="bank" data-id="bni">
                                         <div className="flex items-center gap-5">
                                             <div className="w-14 h-14 rounded-2xl bg-[#EDF5FF] flex items-center justify-center">
-                                                <Image src="https://upload.wikimedia.org/wikipedia/id/5/55/BNI_logo.svg" width={200} height={100} alt="BNI" className="w-8 object-contain" />
+                                                <Image src="https://upload.wikimedia.org/wikipedia/commons/f/f0/Bank_Negara_Indonesia_logo_(2004).svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" width={200} height={100} alt="BNI" className="w-8 object-contain" />
                                             </div>
                                             <div>
                                                 <h3 className="text-[20px] font-bold text-[#1b2433]">Bank BNI</h3>
@@ -144,7 +149,7 @@ export default function CheckoutPage() {
                                     <div className="payment-card border-2 border-[#DBEAFE] bg-white rounded-3xl p-6 cursor-pointer transition-all duration-300" data-type="bank" data-id="bri">
                                         <div className="flex items-center gap-5">
                                             <div className="w-14 h-14 rounded-2xl bg-[#EDF5FF] flex items-center justify-center">
-                                                <Image src="https://upload.wikimedia.org/wikipedia/commons/2/2e/BRI_2020.svg" width={200} height={100} alt="BRI" className="w-8 object-contain" />
+                                                <Image src={briLogo} width={200} height={100} alt="BRI" className="w-8 object-contain" />
                                             </div>
                                             <div>
                                                 <h3 className="text-[20px] font-bold text-[#1b2433]">Bank BRI</h3>
@@ -168,7 +173,7 @@ export default function CheckoutPage() {
                                     </div>
 
                                     <div className="payment-card border-2 border-[#dbeafe] bg-white rounded-3xl py-8 flex flex-col items-center justify-center cursor-pointer transition-all duration-300" data-type="ewallet" data-id="ovo">
-                                        <Image src="https://logo.clearbit.com/ovo.id" width={160} height={60} alt="OVO" className="h-8 object-contain mb-3" />
+                                        <Image src={ovoLogo} width={160} height={60} alt="OVO" className="h-8 object-contain mb-3" />
                                     </div>
 
                                     <div className="payment-card border-2 border-[#dbeafe] bg-white rounded-3xl py-8 flex flex-col items-center justify-center cursor-pointer transition-all duration-300" data-type="ewallet" data-id="gopay">
@@ -176,7 +181,7 @@ export default function CheckoutPage() {
                                     </div>
 
                                     <div className="payment-card border-2 border-[#dbeafe] bg-white rounded-3xl py-8 flex flex-col items-center justify-center cursor-pointer transition-all duration-300" data-type="ewallet" data-id="shopeepay">
-                                        <Image src="https://logo.clearbit.com/shopeepay.co.id" width={180} height={60} alt="ShopeePay" className="h-10 object-contain mb-3" />
+                                        <Image src={shopeePayLogo} width={180} height={60} alt="ShopeePay" className="h-10 object-contain mb-3" />
                                     </div>
 
                                 </div>
