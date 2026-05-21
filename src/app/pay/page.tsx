@@ -1,25 +1,19 @@
-'use client';
-import { midtransPayment } from "@/db/midtransPayment";
-import type { customerDetails } from "@/db/midtransPayment";
-import { useActionState } from "react";
-
+'use client'
+import { payQris } from "@/app/lib/action";
 export default function Pay() {
-    
-    
-    const [paymentState, handlePayment, setPaymentState] = useActionState(midtransPayment,'idle');
-    
-    
+    async function handlePay() {
+        console.log('Initiating payment...');
+        const transactionDetails = {
+            gross_amount: 10000,
+            order_id: "222dorder-0000"
+        };
+        const qrisUrl = await payQris(transactionDetails);
+        console.log('QRIS URL:', qrisUrl);
+    }
     return (
         <div>   
-            <h1>Pay</h1>
-            <form action={handlePayment}>
-                <input type="text" name="customerId" placeholder="Customer ID" />
-                <input type="text" name="username" placeholder="namamu asu" />
-                <input type="number" name="amount" placeholder="Amount" />
-                <input type="text" name="phone" placeholder="NNomor Telepon" />
-                <input type="email" name="email" placeholder="Email" />
-                <button type="submit">Submit</button>
-            </form>
+            <h1 className="font-bold text-4xl">Pay</h1>
+            <button onClick={handlePay}>Pay with QRIS</button>
         </div>
     )
 }
