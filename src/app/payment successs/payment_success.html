@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Success - AirAlam</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+
+    <style>
+        * {
+            font-family: "Inter", sans-serif;
+        }
+        body {
+            background: #f5f7fb;
+            color: #1b2433;
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="fixed z-50 bg-white/90 backdrop-blur-[12px] border-b border-[#1A8FE31A] px-1 flex items-center justify-between top-0 left-0 right-0 px-[5%] gap-4 w-full h-16 ">
+      <div class="flex items-center gap-6">
+          <div class="w-[38px] h-[38px] rounded-full flex items-center justify-center bg-gradient-to-br from-[#1a8fe3] to-[#00d4ff] shadow-[0_4px_12px_rgba(26,143,227,0.35)]">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-white">
+                  <path d="M12 2C12 2 5 10 5 15a7 7 0 0014 0c0-5-7-13-7-13z" />
+              </svg>
+          </div>
+          <span class="text-[1.25rem] font-bold text-[#1a2535] tracking-[-0.5px]">
+              Air<span class="text-[#1a8fe3]">Alam</span>
+          </span>
+      </div>
+
+      <div class="hidden md:flex gap-6">
+        <div class="flex gap-6">
+            <a href=".....\KWU_AIRALAM\Home-Page.html"
+                class="text-sm font-medium text-[#4a5568] hover:text-[#1a8fe3] transition-colors duration-200"> Home</a>
+            <a href=".....\KWU_AIRALAM\tentang.html"         
+                class="text-sm font-medium text-[#4a5568] hover:text-[#1a8fe3] transition-colors duration-200">Tentang</a>
+            <a href=".....\KWU_AIRALAM\brand.html" 
+                class="text-sm font-medium text-[#4a5568] hover:text-[#1a8fe3] transition-colors duration-200">Brand</a>
+            <a href=".....\KWU_AIRALAM\product.html"
+                class="text-sm font-medium text-[#4a5568] hover:text-[#1a8fe3] transition-colors duration-200">Produk</a>
+            <a href=".....\KWU_AIRALAM\kontak.html"
+                class="text-sm font-medium text-[#4a5568] hover:text-[#1a8fe3] transition-colors duration-200">Kontak</a>
+        </div>
+      </div>
+  </nav>
+
+  <section class="max-w-3xl mx-auto px-5 lg:px-8 pt-32 pb-20">
+
+      <div class="flex flex-col items-center text-center mb-10">
+          <div class="w-20 h-20 rounded-full border-[5px] border-[#22c55e] flex items-center justify-center mb-5 bg-[#dcfce7]/30 shadow-[0_0_20px_rgba(34,197,94,0.2)]">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-[#22c55e]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+          </div>
+          <h1 class="text-[32px] font-bold text-[#1b2433] leading-none mb-3">Pembayaran Berhasil!</h1>
+          <p class="text-[16px] text-slate-500">Terima kasih telah berbelanja di AirAlam</p>
+      </div>
+
+      <div class="bg-white rounded-[24px] shadow-sm border border-slate-100 p-8 mb-6">
+          <h2 class="text-[20px] font-bold text-[#1b2433] mb-2">Detail Pesanan</h2>
+          
+          <div class="flex items-center justify-between py-4 border-b border-slate-100">
+              <span class="text-slate-500 text-[15px]">Nomor Invoice</span>
+              <span class="font-bold text-[#1b2433] text-[15px]" id="invoiceNumber">INV-60667902</span>
+          </div>
+
+          <div class="flex items-center justify-between py-4 border-b border-slate-100">
+              <span class="text-slate-500 text-[15px]">Tanggal Pembelian</span>
+              <span class="font-semibold text-[#1b2433] text-[15px]" id="purchaseDate">15 Mei 2026</span>
+          </div>
+
+          <div class="flex items-center justify-between py-4 border-b border-slate-100">
+              <span class="text-slate-500 text-[15px]">Produk</span>
+              <span class="font-semibold text-[#1b2433] text-[15px]" id="productName">AirAlam 600ml x 1</span>
+          </div>
+
+          <div class="flex items-center justify-between pt-4">
+              <span class="text-slate-500 text-[15px]">Total Pembayaran</span>
+              <span class="font-extrabold text-[#2196F3] text-[18px]" id="totalPayment">Rp 20.000</span>
+          </div>
+      </div>
+
+      <div class="bg-white rounded-[24px] shadow-sm border border-slate-100 p-8 mb-6">
+          <h2 class="text-[20px] font-bold text-[#1b2433] mb-6">Informasi Pengiriman</h2>
+
+          <div class="space-y-6">
+              <div class="flex gap-4">
+                  <div class="w-12 h-12 rounded-full bg-gradient-to-r from-[#2196F3] via-[#5FB2F6] to-[#64B5F6] flex items-center justify-center shrink-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                  </div>
+                  <div>
+                      <h3 class="font-bold text-[#1b2433] text-[15px]">Estimasi Pengiriman</h3>
+                      <p class="text-slate-500 text-[14px] mt-0.5" id="deliveryEstimate">2-3 hari kerja</p>
+                  </div>
+              </div>
+
+              <div class="flex gap-4">
+                  <div class="w-12 h-12 rounded-full bg-gradient-to-r from-[#2196F3] via-[#5FB2F6] to-[#64B5F6] flex items-center justify-center shrink-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                  </div>
+                  <div>
+                      <h3 class="font-bold text-[#1b2433] text-[15px]">Alamat Pengiriman</h3>
+                      <p class="text-slate-500 text-[14px] mt-0.5" id="deliveryAddress">Jakarta Selatan, DKI Jakarta 12940</p>
+                  </div>
+              </div>
+
+              <div class="flex gap-4">
+                  <div class="w-12 h-12 rounded-full bg-gradient-to-r from-[#2196F3] via-[#5FB2F6] to-[#64B5F6] flex items-center justify-center shrink-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                      </svg>
+                  </div>
+                  <div>
+                      <h3 class="font-bold text-[#1b2433] text-[15px]">Status Pesanan</h3>
+                      <p class="text-slate-500 text-[14px] mt-0.5" id="orderStatus">Menunggu konfirmasi penjual</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="bg-white rounded-[24px] shadow-sm border border-slate-100 p-8 mb-6">
+          <h2 class="text-[20px] font-bold text-[#1b2433] mb-6">Lacak Pesanan</h2>
+
+          <div class="relative pl-6">
+              <div class="absolute left-[30px] top-6 bottom-6 w-px border-l-2 border-slate-100"></div>
+
+              <div class="step-item relative z-10 flex items-start gap-5 mb-8" data-step="1">
+                  <div class="step-icon w-14 h-14 rounded-full flex items-center justify-center shrink-0 ring-[6px] ring-white transition-all duration-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                  </div>
+                  <div class="pt-2">
+                      <h4 class="font-bold text-[16px] text-[#1b2433]">Menunggu Pembayaran</h4>
+                      <p class="text-[13px] text-slate-500 mt-1">Pesanan menunggu konfirmasi pembayaran</p>
+                      <span class="badge-status hidden mt-3 px-4 py-1 bg-[#E3F2FD] text-[#2196F3] text-[12px] font-semibold rounded-full">Sedang Berlangsung</span>
+                  </div>
+              </div>
+
+              <div class="step-item relative z-10 flex items-start gap-5 mb-8" data-step="2">
+                  <div class="step-icon w-14 h-14 rounded-full flex items-center justify-center shrink-0 ring-[6px] ring-white transition-all duration-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                      </svg>
+                  </div>
+                  <div class="pt-3">
+                      <h4 class="font-bold text-[16px] text-[#1b2433]">Diproses</h4>
+                      <p class="text-[13px] text-slate-500 mt-1">Pesanan sedang dikemas oleh penjual</p>
+                      <span class="badge-status hidden mt-3 px-4 py-1 bg-[#E3F2FD] text-[#2196F3] text-[12px] font-semibold rounded-full">Sedang Berlangsung</span>
+                  </div>
+              </div>
+
+              <div class="step-item relative z-10 flex items-start gap-5 mb-8" data-step="3">
+                  <div class="step-icon w-14 h-14 rounded-full flex items-center justify-center shrink-0 ring-[6px] ring-white transition-all duration-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                      </svg>
+                  </div>
+                  <div class="pt-3">
+                      <h4 class="font-bold text-[16px] text-[#1b2433]">Dikirim</h4>
+                      <p class="text-[13px] text-slate-500 mt-1">Pesanan dalam perjalanan ke alamat Anda</p>
+                      <span class="badge-status hidden mt-3 px-4 py-1 bg-[#E3F2FD] text-[#2196F3] text-[12px] font-semibold rounded-full">Sedang Berlangsung</span>
+                  </div>
+              </div>
+
+              <div class="step-item relative z-10 flex items-start gap-5" data-step="4">
+                  <div class="step-icon w-14 h-14 rounded-full flex items-center justify-center shrink-0 ring-[6px] ring-white transition-all duration-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                  </div>
+                  <div class="pt-3">
+                      <h4 class="font-bold text-[16px] text-[#1b2433]">Selesai</h4>
+                      <p class="text-[13px] text-slate-500 mt-1">Pesanan telah sampai di tujuan</p>
+                      <span class="badge-status hidden mt-3 px-4 py-1 bg-[#E3F2FD] text-[#2196F3] text-[12px] font-semibold rounded-full">Sedang Berlangsung</span>
+                  </div>
+              </div>
+          </div>
+
+          <div class="mt-8 bg-[#f8fafc] rounded-2xl py-4 px-6 text-center text-slate-500 text-[13px] font-medium border border-slate-100">
+              Pesanan akan diproses setelah pembayaran dikonfirmasi
+          </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-4 mb-6">
+          <a href="#" class="flex-1 h-[60px] rounded-full border-2 border-[#2196F3] text-[#2196F3] font-semibold flex items-center justify-center text-[16px] hover:bg-[#E3F2FD] transition">
+              Belanja Lagi
+          </a>
+          <a href="#" class="flex-1 h-[60px] rounded-full bg-gradient-to-r from-[#2196F3] to-[#64B5F6] text-white font-semibold flex items-center justify-center gap-2 text-[16px] shadow-lg shadow-blue-500/30 hover:opacity-90 transition">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+              </svg>
+              Kembali ke Beranda
+          </a>
+      </div>
+
+      <div class="bg-[#f8fafc] rounded-3xl py-6 px-8 text-center border border-slate-100">
+          <p class="text-slate-500 text-[14px] leading-relaxed">
+              Kami telah mengirimkan konfirmasi pesanan ke email Anda.<br>
+              Periksa inbox untuk detail lengkap pesanan.
+          </p>
+      </div>
+
+  </section>
+
+  <footer class="bg-gradient-to-r from-[#162033] to-[#28344a] text-white mt-10">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16">
+          <div class="border-t border-white/10 mt-14 pt-8 text-center text-slate-400 text-[15px]">
+              © 2026 AirAlam. Natural Freshness Everyday.
+          </div>
+      </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        
+        const currentStep = 1; 
+
+        const stepItems = document.querySelectorAll('.step-item');
+
+        stepItems.forEach(item => {
+            const stepNumber = parseInt(item.dataset.step);
+            const iconBox = item.querySelector('.step-icon');
+            const svgIcon = item.querySelector('.step-icon svg');
+            const badge = item.querySelector('.badge-status');
+
+            if (stepNumber < currentStep) {
+                iconBox.classList.add('bg-gradient-to-r', 'from-[#2196F3]', 'via-[#5FB2F6]', 'to-[#64B5F6]', 'text-white');
+                iconBox.classList.remove('border', 'border-slate-200', 'bg-white', 'text-slate-400', 'shadow-[0_0_20px_rgba(33,150,243,0.35)]');
+                svgIcon.classList.remove('text-slate-400');
+                if(badge) badge.classList.add('hidden');
+
+            } else if (stepNumber === currentStep) {
+                iconBox.classList.add('bg-gradient-to-r', 'from-[#2196F3]', 'via-[#5FB2F6]', 'to-[#64B5F6]', 'text-white', 'shadow-[0_0_20px_rgba(33,150,243,1)]');
+                iconBox.classList.remove('border', 'border-slate-200', 'bg-white', 'text-slate-400');
+                svgIcon.classList.remove('text-slate-400');
+                if(badge) badge.classList.remove('hidden');
+
+            } else {
+                iconBox.classList.add('border', 'border-slate-200', 'bg-white', 'text-slate-400');
+                iconBox.classList.remove('bg-gradient-to-r', 'from-[#2196F3]', 'via-[#5FB2F6]', 'to-[#64B5F6]', 'text-white', 'shadow-[0_0_20px_rgba(33,150,243,1)]', 'shadow-[0_0_20px_rgba(33,150,243,0.35)]');
+                if(badge) badge.classList.add('hidden');
+            }
+        });
+    });
+  </script>
+
+</body>
+</html>
