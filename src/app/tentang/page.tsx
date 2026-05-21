@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import { SiteFooter, SiteHeader } from "@/components/site-shell";
+import { SiteFooter } from "@/components/site-shell";
 
 const historyData = [
   {
@@ -158,11 +158,9 @@ export default function TentangPage() {
 
   return (
     <main className="min-h-screen bg-white text-slate-900">
-      <SiteHeader active="tentang" />
-
       <section className="relative isolate overflow-hidden bg-slate-100 pt-28 sm:pt-32 lg:pt-36">
         <Image
-          src="/gambar8.jpeg"
+          src="/hero.jpg"
           alt="Tentang AirAlam"
           fill
           priority

@@ -20,9 +20,6 @@ importers:
       react-dom:
         specifier: 19.2.4
         version: 19.2.4(react@19.2.4)
-      snap.js:
-        specifier: ^2.0.9
-        version: 2.0.9
     devDependencies:
       '@tailwindcss/postcss':
         specifier: ^4
@@ -1850,9 +1847,6 @@ packages:
   side-channel@1.1.0:
     resolution: {integrity: sha512-ZX99e6tRweoUXqR+VBrslhda51Nh5MTQwou5tnUDgbtyM0dBgmhEDtWGP/xbKn6hqfPRHujUNwz5fy/wbbhnpw==}
     engines: {node: '>= 0.4'}
-
-  snap.js@2.0.9:
-    resolution: {integrity: sha512-x9+obN8qeW1e2mkRbMuEPYcnulYWv8G+hhxLiOHKKv8WMzA1LGvb+jJ4qUEOSWqI5n5bkGCo6gG1gjpj9vnUJg==}
 
   source-map-js@1.2.1:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
@@ -3969,8 +3963,6 @@ snapshots:
       side-channel-list: 1.0.1
       side-channel-map: 1.0.1
       side-channel-weakmap: 1.0.2
-
-  snap.js@2.0.9: {}
 
   source-map-js@1.2.1: {}
 

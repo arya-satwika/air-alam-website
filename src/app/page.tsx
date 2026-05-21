@@ -7,43 +7,6 @@ export const metadata = {
 export default function Home() {
   return (
     <main className="min-h-screen overflow-x-hidden bg-[#f8fbff] font-sans text-[#1a2535]">
-      <nav className="fixed left-0 right-0 top-0 z-[100] flex h-16 items-center justify-between border-b border-[rgba(26,143,227,0.1)] bg-white/[0.92] px-[5%] shadow-[0_2px_20px_rgba(26,143,227,0.08)] backdrop-blur-[12px]">
-        <div className="flex items-center gap-2.5">
-          <div className="flex h-[38px] w-[38px] items-center justify-center rounded-full bg-[linear-gradient(135deg,#1a8fe3,#00d4ff)] shadow-[0_4px_12px_rgba(26,143,227,0.35)]">
-            <svg
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5 fill-white"
-            >
-              <path d="M12 2C12 2 5 10 5 15a7 7 0 0014 0c0-5-7-13-7-13z" />
-            </svg>
-          </div>
-          <span className="text-[1.25rem] font-bold tracking-[-0.5px] text-[#1a2535]">
-            Air<span className="text-[#1a8fe3]">Alam</span>
-          </span>
-        </div>
-
-        <div className="flex gap-6 text-sm font-medium text-[#4a5568] lg:gap-8">
-          <Link
-            href="/"
-            className="relative text-[#1a8fe3] after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:rounded-full after:bg-[#1a8fe3]"
-          >
-            Home
-          </Link>
-          <a href="/tentang" className="transition-colors duration-200 hover:text-[#1a8fe3]">
-            Tentang
-          </a>
-          <a href="/brand" className="transition-colors duration-200 hover:text-[#1a8fe3]">
-            Brand
-          </a>
-          <a href="/produk" className="transition-colors duration-200 hover:text-[#1a8fe3]">
-            Produk
-          </a>
-          <Link href="/#kontak" className="transition-colors duration-200 hover:text-[#1a8fe3]">
-            Kontak
-          </Link>
-        </div>
-      </nav>
 
       <section className="relative isolate overflow-hidden bg-[linear-gradient(160deg,#f0f9ff_0%,#e8f4fe_40%,#ddf0fd_100%)] px-[5%] pb-16 pt-16 min-[993px]:grid min-[993px]:min-h-screen min-[993px]:grid-cols-2 min-[993px]:items-center">
         <div
