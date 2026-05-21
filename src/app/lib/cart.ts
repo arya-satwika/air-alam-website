@@ -7,7 +7,10 @@
 // 1.5l : id 5 9.5k
 // 19l : id 6 28k
 
-
+export type Cart = {
+    id: number,
+    quantity: number
+}
 
 localStorage.setItem('cart', JSON.stringify([
     {
