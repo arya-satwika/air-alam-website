@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AirAlam - Tentang</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Allura&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <link rel="stylesheet" href="tentang.css">
+</head>
+
+<body>
+
+  <!-- Hero Section Start -->
+  <section class="hero">
+    <!-- Navbar Start -->
+    <nav class="navbar">
+      <a href="#" class="nav-logo">
+        Air<span>Alam</span>
+      </a>
+
+      <div class="nav-menu">
+        <a href="homenew.html">Home</a>
+        <a href="#" class="active">Tentang</a>
+        <a href="brand.html">Brand</a>
+        <a href="produk.html">Produk</a>
+        <a href="kontak.html">Kontak</a>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Hero Content Start -->
+    <div class="hero-content">
+      <h1>
+        Tentang <span class="blue-text">AirAlam</span>
+      </h1>
+
+      <p class="desc">
+        Lebih dari sekedar air minum. Kami adalah komitmen untuk kesehatan dan kesejahteraan Anda.
+        AirAlam hadir membawa kemurnian alami yang terinspirasi langsung dari kesejukan alam Indonesia.
+      </p>
+    </div>
+    <!-- Hero Content End -->
+  </section>
+  <!-- Hero Section End -->
+
+
+  <!-- History Section Start -->
+  <section class="history-section">
+    <div class="history-container">
+
+      <div class="modern-slider">
+        <div class="image-stage">
+          <div class="image-glow"></div>
+          <div class="image-outline"></div>
+
+          <div class="image-card">
+            <img id="historyImage" src="img/gambar1.jpeg" alt="Sejarah AirAlam">
+            <div class="slide-number" id="slideNumber">01 / 03</div>
+          </div>
+        </div>
+
+        <div class="slider-controls">
+          <button class="control-btn" onclick="prevSlide()">
+            <span class="material-icons-round">west</span>
+          </button>
+
+          <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+
+          <button class="control-btn" onclick="nextSlide()">
+            <span class="material-icons-round">east</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="history-text">
+        <span class="history-label">AirAlam Story</span>
+        <h2 id="historyTitle">Sejarah Kami</h2>
+        <h3 id="historySubtitle">Awal Perjalanan AirAlam</h3>
+        <div class="text-line"></div>
+        <p id="historyDesc">
+          AirAlam didirikan pada tahun 1994 dengan visi sederhana namun kuat:
+          menyediakan air minum berkualitas premium yang terjangkau untuk seluruh masyarakat Indonesia.
+        </p>
+      </div>
+
+    </div>
+  </section>
+  <!-- History Section End -->
+
+  <!-- Vision Mission Section Start -->
+  <section class="vision-mission-section">
+    <div class="vm-container">
+      <div class="vm-text vision">
+        <h2>Visi Kami</h2>
+        <p>
+          Menjadi brand air minum pilihan utama di Indonesia yang dikenal dengan standar kualitas tertinggi,
+          inovasi berkelanjutan, dan kontribusi nyata terhadap kesehatan masyarakat serta kelestarian lingkungan.
+        </p>
+      </div>
+
+      <div class="vm-bottle-wrap">
+        <div class="star-spin">❋</div>
+        <img class="vm-bottle" src="img/botol.png" alt="Botol AirAlam">
+      </div>
+
+      <div class="vm-text mission">
+        <h2>Misi Kami</h2>
+        <ul>
+          <li>Menyediakan air minum berkualitas premium dengan harga terjangkau.</li>
+          <li>Menerapkan praktik produksi yang ramah lingkungan dan berkelanjutan.</li>
+          <li>Berinovasi terus-menerus untuk meningkatkan kualitas produk.</li>
+          <li>Memberikan nilai terbaik kepada pelanggan, mitra, dan stakeholder.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="vm-footer-line">
+      <span>AirAlam</span>
+    </div>
+  </section>
+  <!-- Vision Mission Section End -->
+
+
+  <!-- Values Section Start -->
+  <section class="values-section">
+    <div class="values-container">
+      <div class="values-intro">
+        <span class="values-label">AirAlam Values</span>
+        <h2>Nilai-Nilai Kami</h2>
+        <p>
+          Prinsip yang memandu setiap keputusan dan tindakan kami untuk menjaga kualitas,
+          kepercayaan, serta keberlanjutan dalam setiap botol AirAlam.
+        </p>
+      </div>
+
+      <div class="values-grid">
+        <div class="value-card">
+          <span class="value-number">01</span>
+          <div class="value-content">
+            <div class="value-icon">
+              <span class="material-icons-round">water_drop</span>
+            </div>
+            <div class="value-text">
+              <h3>Kualitas Premium</h3>
+              <p>
+                Setiap botol AirAlam melalui kontrol kualitas ketat dengan standar internasional
+                untuk memastikan kemurnian dan kesegaran.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="value-card">
+          <span class="value-number">02</span>
+          <div class="value-content">
+            <div class="value-icon">
+              <span class="material-icons-round">eco</span>
+            </div>
+            <div class="value-text">
+              <h3>Sustainability</h3>
+              <p>
+                Kami berkomitmen pada praktik ramah lingkungan, dari sumber air hingga kemasan
+                yang dapat didaur ulang.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="value-card">
+          <span class="value-number">03</span>
+          <div class="value-content">
+            <div class="value-icon">
+              <span class="material-icons-round">verified_user</span>
+            </div>
+            <div class="value-text">
+              <h3>Keamanan Terjamin</h3>
+              <p>
+                Proses produksi higienis dengan sertifikasi BPOM dan ISO untuk menjamin keamanan
+                produk kami.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="value-card">
+          <span class="value-number">04</span>
+          <div class="value-content">
+            <div class="value-icon">
+              <span class="material-icons-round">favorite_border</span>
+            </div>
+            <div class="value-text">
+              <h3>Kesehatan Masyarakat</h3>
+              <p>
+                Misi kami adalah meningkatkan kualitas hidup masyarakat melalui akses air minum
+                berkualitas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Values Section End -->
+
+  <!-- Journey Section Start -->
+  <section class="journey-section">
+    <div class="journey-wrap">
+      <div class="journey-heading">
+        <span>AirAlam Journey</span>
+        <h2>Perjalanan Penting AirAlam</h2>
+        <p>Milestone penting dalam sejarah AirAlam</p>
+      </div>
+
+      <div class="journey-content">
+        <div class="journey-center">
+          <img src="img/gambar6.png" alt="Perjalanan AirAlam">
+        </div>
+
+        <div class="journey-point left point-1">
+          <span>[1994]</span>
+          <h3>Pendirian AirAlam</h3>
+          <p>Berawal dari visi menyediakan air minum berkualitas tinggi untuk masyarakat Indonesia.</p>
+        </div>
+
+        <div class="journey-point left point-2">
+          <span>[2000]</span>
+          <h3>Pengembangan Distribusi</h3>
+          <p>Memperluas jaringan distribusi ke berbagai wilayah untuk memenuhi kebutuhan konsumen.</p>
+        </div>
+
+        <div class="journey-point left point-3">
+          <span>[2008]</span>
+          <h3>Modernisasi Produk</h3>
+          <p>Mengadopsi teknologi penyaringan dan pengemasan modern untuk menjaga kualitas produk.</p>
+        </div>
+
+        <div class="journey-point right point-4">
+          <span>[2015]</span>
+          <h3>Sertifikasi dan Standar Kualitas</h3>
+          <p>Memperoleh sertifikasi mutu dan keamanan pangan sebagai komitmen terhadap kualitas.</p>
+        </div>
+
+        <div class="journey-point right point-5">
+          <span>[2022]</span>
+          <h3>Inisiatif Ramah Lingkungan</h3>
+          <p>Menerapkan program keberlanjutan melalui kemasan ramah lingkungan dan efisiensi produksi.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Journey Section End -->
+
+  <!-- Production Section Start -->
+  <section class="production-section">
+    <div class="production-wrap">
+
+      <div class="production-left">
+        <h2>
+          PROSES<br>
+          PRODUKSI<br>
+          KAMI
+        </h2>
+
+        <p class="production-subtitle">
+          Setiap botol melalui proses ketat untuk memastikan kualitas terbaik
+        </p>
+
+        <div class="production-photo">
+          <img src="img/gambar7.png" alt="Proses Produksi AirAlam">
+        </div>
+
+        <div class="production-star">✦</div>
+      </div>
+
+      <div class="production-line"></div>
+
+      <div class="production-middle">
+        <div class="process-item">
+          <span>01</span>
+          <h3>Sumber Air Alami</h3>
+          <p>Air diambil dari sumber pegunungan pilihan yang terjaga kelestariannya.</p>
+        </div>
+
+        <div class="process-item">
+          <span>02</span>
+          <h3>Penyaringan 7 Tahap</h3>
+          <p>Proses filtrasi canggih untuk menghilangkan kontaminan dan menjaga mineral alami.</p>
+        </div>
+
+        <div class="process-item">
+          <span>03</span>
+          <h3>Sterilisasi UV</h3>
+          <p>Teknologi UV untuk memastikan bebas dari bakteri dan mikroorganisme berbahaya.</p>
+        </div>
+      </div>
+
+      <div class="production-line"></div>
+
+      <div class="production-right">
+        <div class="process-item">
+          <span>04</span>
+          <h3>Quality Control</h3>
+          <p>Pengujian laboratorium ketat di setiap batch produksi.</p>
+        </div>
+
+        <div class="process-item">
+          <span>05</span>
+          <h3>Pengemasan Higienis</h3>
+          <p>Botol food-grade BPA-free yang aman dan menjaga kesegaran.</p>
+        </div>
+
+        <div class="process-item">
+          <span>06</span>
+          <h3>Distribusi Terpercaya</h3>
+          <p>Sistem distribusi efisien untuk memastikan produk sampai dalam kondisi prima.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- Production Section End -->
+
+  <!-- Quality Commitment Section Start -->
+  <section class="quality-section">
+    <div class="quality-wrap">
+      <div class="quality-top">
+        <div class="quality-left">
+          <span class="quality-badge">Standar Kualitas Tertinggi</span>
+
+          <h3>
+            Komitmen Kualitas<br>
+            Tanpa Kompromi
+          </h3>
+
+          <p>
+            Setiap botol AirAlam diproduksi dengan standar kualitas internasional.
+            Kami memiliki sertifikasi BPOM, ISO 9001, dan berbagai penghargaan
+            industri yang membuktikan dedikasi kami terhadap excellence.
+          </p>
+        </div>
+      </div>
+
+      <div class="quality-gallery">
+        <div class="quality-card">
+          <img src="img/gambar1.jpeg" alt="Sertifikasi BPOM">
+          <div class="quality-overlay">
+            <h3>Sertifikasi BPOM</h3>
+          </div>
+        </div>
+
+        <div class="quality-card">
+          <img src="img/gambar2.jpeg" alt="ISO 9001:2015">
+          <div class="quality-overlay">
+            <h3>ISO 9001:2015</h3>
+          </div>
+        </div>
+
+        <div class="quality-card">
+          <img src="img/gambar3.jpeg" alt="Eco-Friendly">
+          <div class="quality-overlay">
+            <h3>Eco-Friendly</h3>
+          </div>
+        </div>
+
+        <div class="quality-card">
+          <img src="img/gambar4.jpeg" alt="1M+ Pelanggan">
+          <div class="quality-overlay">
+            <h3>1M+ Pelanggan</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Quality Commitment Section End -->
+
+  <!-- Footer Start -->
+  <footer class="footer">
+    <div class="footer-glow footer-glow-1"></div>
+    <div class="footer-glow footer-glow-2"></div>
+
+    <div class="footer-container">
+
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="footer-logo-icon">
+            <span class="material-icons-round">water_drop</span>
+          </div>
+          <h2>AirAlam</h2>
+        </div>
+
+        <p>
+          Kesegaran alami dalam setiap tetes untuk gaya hidup sehat,
+          modern, dan penuh keseimbangan.
+        </p>
+
+        <div class="footer-socials">
+          <a href="https://www.airalam.id/"><span class="material-icons-round">language</span></a>
+          <a href="https://www.instagram.com/airalamid/"><span class="material-icons-round">photo_camera</span></a>
+          <a href="https://www.youtube.com/@airalamid"><span class="material-icons-round">smart_display</span></a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h3>Menu</h3>
+        <a href="homenew.html">Home</a>
+        <a href="tentang.html">Tentang</a>
+        <a href="brand.html">Brand</a>
+        <a href="produk.html">Produk</a>
+      </div>
+
+      <div class="footer-links">
+        <h3>Produk</h3>
+        <a href="#">AirAlam 330ml</a>
+        <a href="#">AirAlam 600ml</a>
+        <a href="#">AirAlam 1.5L</a>
+        <a href="#">AirAlam Eco+</a>
+      </div>
+
+      <div class="footer-links footer-contact">
+        <h3>Hubungi Kami</h3>
+
+        <a href="#">
+          <span class="material-icons-round">mail</span>
+          info@airalam.co.id
+        </a>
+
+        <a href="#">
+          <span class="material-icons-round">call</span>
+          0858-99999-252
+        </a>
+
+        <a href="#">
+          <span class="material-icons-round">photo_camera</span>
+          @airalamid
+        </a>
+
+        <a href="#">
+          <span class="material-icons-round">location_on</span>
+          Tangerang, Indonesia
+        </a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-line"></div>
+
+      <p>
+        © 2026 AirAlam. Natural Freshness Everyday.
+      </p>
+    </div>
+  </footer>
+  <!-- Footer End -->
+
+  <!-- Slider Script Start -->
+  <script>
+    const historyData = [
+      {
+        image: "img/gambar1.jpeg",
+        title: "Sejarah Kami",
+        subtitle: "Awal Perjalanan AirAlam",
+        desc: "AirAlam didirikan pada tahun 1994 dengan visi sederhana namun kuat: menyediakan air minum berkualitas premium yang terjangkau untuk seluruh masyarakat Indonesia."
+      },
+      {
+        image: "img/gambar2.jpeg",
+        title: "Sejarah Kami",
+        subtitle: "Berkembang Bersama Kualitas",
+        desc: "Berawal dari satu fasilitas produksi kecil, kini AirAlam telah berkembang menjadi salah satu produsen air minum terkemuka dengan jangkauan distribusi di seluruh nusantara. Perjalanan kami didorong oleh komitmen tanpa henti terhadap kualitas, inovasi, dan keberlanjutan."
+      },
+      {
+        image: "img/gambar3.jpeg",
+        title: "Sejarah Kami",
+        subtitle: "Komitmen Untuk Indonesia",
+        desc: "Setiap hari, kami melayani jutaan pelanggan yang mempercayai AirAlam sebagai pilihan mereka untuk hidup lebih sehat. Ini bukan hanya tentang bisnis, tetapi tentang membuat perbedaan nyata dalam kehidupan masyarakat."
+      }
+    ];
+
+    let currentIndex = 0;
+
+    const img = document.getElementById("historyImage");
+    const title = document.getElementById("historyTitle");
+    const subtitle = document.getElementById("historySubtitle");
+    const desc = document.getElementById("historyDesc");
+    const slideNumber = document.getElementById("slideNumber");
+    const dots = document.querySelectorAll(".dot");
+
+    function updateSlide() {
+      img.style.opacity = "0";
+      img.style.transform = "scale(1.04)";
+
+      setTimeout(() => {
+        img.src = historyData[currentIndex].image;
+        title.textContent = historyData[currentIndex].title;
+        subtitle.textContent = historyData[currentIndex].subtitle;
+        desc.textContent = historyData[currentIndex].desc;
+        slideNumber.textContent = `0${currentIndex + 1} / 03`;
+
+        dots.forEach(dot => dot.classList.remove("active"));
+        dots[currentIndex].classList.add("active");
+
+        img.style.opacity = "1";
+        img.style.transform = "scale(1)";
+      }, 260);
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % historyData.length;
+      updateSlide();
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + historyData.length) % historyData.length;
+      updateSlide();
+    }
+  </script>
+  <!-- Slider Script End -->
+
+</body>
+
+</html>

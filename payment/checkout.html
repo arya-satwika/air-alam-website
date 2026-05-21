@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Checkout - AirAlam</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Inter -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    * {
+      font-family: "Inter", sans-serif;
+    }
+
+    body {
+      background: #f5f7fb;
+      color: #1b2433;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+    <nav class="fixed z-50 bg-white/90 backdrop-blur-[12px] border-b border-[#1A8FE31A] px-1 flex items-center justify-between top-0 left-0 right-0 px-[5%] gap-4 w-full h-16 ">
+
+        <!-- Border logo -->
+         <div class="flex items-center gap-6">
+            <!-- Icon logo -->
+            <div class="w-[38px] h-[38px] rounded-full flex items-center justify-center bg-gradient-to-br from-[#1a8fe3] to-[#00d4ff] shadow-[0_4px_12px_rgba(26,143,227,0.35)]">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-white">
+                    <path d="M12 2C12 2 5 10 5 15a7 7 0 0014 0c0-5-7-13-7-13z" />
+                </svg>
+            </div>
+            
+            <span class="text-[1.25rem] font-bold text-[#1a2535] tracking-[-0.5px]">
+                Air<span class="text-[#1a8fe3]">Alam</span>
+            </span>
+         </div>
+
+        <div class="flex gap-6">
+            <a href=".....\KWU_AIRALAM\Home-Page.html"
+                class="text-sm font-medium text-[#4a5568] hover:text-[#1a8fe3] transition-colors duration-200"> Home</a>
+            <a href=".....\KWU_AIRALAM\tentang.html"         
+                class="text-sm font-medium text-[#4a5568] hover:text-[#1a8fe3] transition-colors duration-200">Tentang</a>
+            <a href=".....\KWU_AIRALAM\brand.html" 
+                class="text-sm font-medium text-[#4a5568] hover:text-[#1a8fe3] transition-colors duration-200">Brand</a>
+            <a href=".....\KWU_AIRALAM\product.html"
+                class="text-sm font-medium text-[#4a5568] hover:text-[#1a8fe3] transition-colors duration-200">Produk</a>
+            <a href=".....\KWU_AIRALAM\kontak.html"
+                class="text-sm font-medium text-[#4a5568] hover:text-[#1a8fe3] transition-colors duration-200">Kontak</a>
+        </div>
+    </nav>
+
+  <!-- Main -->
+<section class="max-w-6xl mx-auto px-5 lg:px-8 pt-20 pb-10">
+
+    <!-- Title -->
+    <div class="mb-10">
+      <h1 class="text-[32px] font-extrabold text-[#1b2433] leading-none">
+        Checkout
+      </h1>
+
+      <p class="text-[15px] text-slate-500 mt-3">
+        Selesaikan pembayaran Anda
+      </p>
+    </div>
+
+    <!-- Ringkasan Produk -->
+    <div class="bg-white rounded-[28px] shadow-lg p-6 mb-8">
+
+      <h2 class="text-[26px] font-bold text-[#1b2433] mb-8">
+        Ringkasan Produk
+      </h2>
+
+      <div class="flex flex-col md:flex-row md:items-center gap-6">
+
+        <!-- Image -->
+        <div class="w-[120px] h-[120px] bg-[#f5f7fb] rounded-2xl flex items-center justify-center">
+          <img
+            src="https://placehold.co/80x80"
+            alt="produk"
+            class="w-[80px]"
+          />
+        </div>
+
+        <!-- Info -->
+        <div class="flex-1">
+
+          <h3 class="text-[24px] font-bold text-[#1b2433]">
+            AirAlam 600ml
+          </h3>
+
+          <p class="text-[24px] font-extrabold text-[#2492ff] mt-3">
+            Rp 5.000
+          </p>
+
+          <!-- Qty -->
+          <div class="flex items-center gap-5 mt-6">
+
+            <span class="text-slate-500 text-[20px]">
+              Jumlah:
+            </span>
+
+            <div class="flex items-center gap-5">
+
+              <button class="w-10 h-10 rounded-full bg-[#edf5ff] text-[#2492ff] text-lg font-bold">
+                -
+              </button>
+
+              <span class="text-[24px] font-semibold text-[#1b2433]">
+                1
+              </span>
+
+              <button class="w-10 h-10 rounded-full bg-[#edf5ff] text-[#2492ff] text-lg font-bold">
+                +
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Promo -->
+    <div class="bg-white rounded-[28px] shadow-lg p-6 mb-8">
+
+      <div class="flex items-center gap-3 mb-6">
+
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#2492ff]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M7 7h.01M3 11l8.586 8.586a2 2 0 002.828 0l6-6a2 2 0 000-2.828L11.828 2H3v9z" />
+        </svg>
+
+        <h2 class="text-[24px] font-bold text-[#1b2433]">
+          Kode Promo
+        </h2>
+
+      </div>
+
+      <div class="flex flex-col md:flex-row gap-4">
+
+        <input
+          type="text"
+          placeholder="Masukkan kode promo"
+          class="flex-1 h-[70px] rounded-2xl border border-[#cfe5ff] px-6 outline-none text-[15px]"
+        />
+
+        <button class="h-[70px] px-10 rounded-2xl bg-[#2492ff] text-white text-[18px] font-semibold">
+          Terapkan
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- Metode Pembayaran -->
+    <div class="bg-white rounded-[28px] shadow-lg p-6 mb-8">
+
+      <div class="flex items-center gap-3 mb-8">
+
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#2492ff]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M3 10h18M7 15h.01M11 15h2m-9 4h16a2 2 0 002-2V7a2 2 0 00-2-2H4a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+
+        <h2 class="text-[26px] font-bold text-[#1b2433]">
+          Metode Pembayaran
+        </h2>
+
+      </div>
+
+      <!-- QRIS -->
+      <div class="mb-8">
+
+        <p class="text-[15px] font-semibold text-slate-500 mb-4">
+          QRIS
+        </p>
+
+        <div class="border border-[#dbeafe] rounded-3xl p-6 flex items-center gap-5">
+
+          <div class="w-14 h-14 rounded-2xl bg-[#edf5ff] flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#2492ff]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 4h6v6H4V4zm10 0h6v6h-6V4zM4 14h6v6H4v-6zm11 1h2m-2 4h5m-5-2h2m-9-2h2m0 4h2" />
+            </svg>
+          </div>
+
+          <div>
+            <h3 class="text-[20px] font-bold text-[#1b2433]">
+              QRIS
+            </h3>
+
+            <p class="text-[17px] text-slate-500 mt-1">
+              Scan QR untuk bayar
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Transfer -->
+      <div class="mb-8">
+
+        <p class="text-[15px] font-semibold text-slate-500 mb-4">
+          Transfer Bank
+        </p>
+
+        <div class="space-y-4">
+
+          <!-- Item -->
+          <div class="border border-[#dbeafe] rounded-3xl p-6 flex items-center gap-5">
+            <div class="w-14 h-14 rounded-2xl bg-[#edf5ff] flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#2492ff]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M3 10l9-7 9 7v10a1 1 0 01-1 1h-5v-6H9v6H4a1 1 0 01-1-1V10z" />
+              </svg>
+            </div>
+
+            <h3 class="text-[20px] font-bold text-[#1b2433]">
+              Bank BCA
+            </h3>
+          </div>
+
+          <div class="border border-[#dbeafe] rounded-3xl p-6 flex items-center gap-5">
+            <div class="w-14 h-14 rounded-2xl bg-[#edf5ff] flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#2492ff]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M3 10l9-7 9 7v10a1 1 0 01-1 1h-5v-6H9v6H4a1 1 0 01-1-1V10z" />
+              </svg>
+            </div>
+
+            <h3 class="text-[20px] font-bold text-[#1b2433]">
+              Bank Mandiri
+            </h3>
+          </div>
+
+          <div class="border border-[#dbeafe] rounded-3xl p-6 flex items-center gap-5">
+            <div class="w-14 h-14 rounded-2xl bg-[#edf5ff] flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#2492ff]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M3 10l9-7 9 7v10a1 1 0 01-1 1h-5v-6H9v6H4a1 1 0 01-1-1V10z" />
+              </svg>
+            </div>
+
+            <h3 class="text-[20px] font-bold text-[#1b2433]">
+              Bank BNI
+            </h3>
+          </div>
+
+          <div class="border border-[#dbeafe] rounded-3xl p-6 flex items-center gap-5">
+            <div class="w-14 h-14 rounded-2xl bg-[#edf5ff] flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#2492ff]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M3 10l9-7 9 7v10a1 1 0 01-1 1h-5v-6H9v6H4a1 1 0 01-1-1V10z" />
+              </svg>
+            </div>
+
+            <h3 class="text-[20px] font-bold text-[#1b2433]">
+              Bank BRI
+            </h3>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Ewallet -->
+      <div>
+
+        <p class="text-[20px] font-semibold text-slate-500 mb-4">
+          E-Wallet
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+          <!-- Card -->
+          <div class="border border-[#dbeafe] rounded-3xl py-10 flex flex-col items-center justify-center">
+            <div class="w-14 h-14 rounded-2xl bg-[#edf5ff] flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#2492ff]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M17 9V7a4 4 0 00-8 0v2m-2 0h12a2 2 0 012 2v7a2 2 0 01-2 2H5a2 2 0 01-2-2v-7a2 2 0 012-2z" />
+              </svg>
+            </div>
+
+            <h3 class="text-[20px] font-bold text-[#1b2433]">
+              DANA
+            </h3>
+          </div>
+
+          <div class="border border-[#dbeafe] rounded-3xl py-10 flex flex-col items-center justify-center">
+            <div class="w-14 h-14 rounded-2xl bg-[#edf5ff] flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#2492ff]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M17 9V7a4 4 0 00-8 0v2m-2 0h12a2 2 0 012 2v7a2 2 0 01-2 2H5a2 2 0 01-2-2v-7a2 2 0 012-2z" />
+              </svg>
+            </div>
+
+            <h3 class="text-[20px] font-bold text-[#1b2433]">
+              OVO
+            </h3>
+          </div>
+
+          <div class="border border-[#dbeafe] rounded-3xl py-10 flex flex-col items-center justify-center">
+            <div class="w-14 h-14 rounded-2xl bg-[#edf5ff] flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#2492ff]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M17 9V7a4 4 0 00-8 0v2m-2 0h12a2 2 0 012 2v7a2 2 0 01-2 2H5a2 2 0 01-2-2v-7a2 2 0 012-2z" />
+              </svg>
+            </div>
+
+            <h3 class="text-[20px] font-bold text-[#1b2433]">
+              GoPay
+            </h3>
+          </div>
+
+          <div class="border border-[#dbeafe] rounded-3xl py-10 flex flex-col items-center justify-center">
+            <div class="w-14 h-14 rounded-2xl bg-[#edf5ff] flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#2492ff]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M17 9V7a4 4 0 00-8 0v2m-2 0h12a2 2 0 012 2v7a2 2 0 01-2 2H5a2 2 0 01-2-2v-7a2 2 0 012-2z" />
+              </svg>
+            </div>
+
+            <h3 class="text-[20px] font-bold text-[#1b2433]">
+              ShopeePay
+            </h3>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Ringkasan Pembayaran -->
+    <div class="bg-white rounded-[28px] shadow-lg p-6">
+
+      <h2 class="text-[26px] font-bold text-[#1b2433] mb-8">
+        Ringkasan Pembayaran
+      </h2>
+
+      <div class="space-y-6">
+
+        <div class="flex items-center justify-between">
+          <p class="text-[22px] text-[#64748B]">
+            Subtotal (1 item)
+          </p>
+
+          <p class="text-[22px] text-[#64748B]">
+            Rp 5.000
+          </p>
+        </div>
+
+        <div class="flex items-center justify-between">
+          <p class="text-[22px] text-[#64748B]">
+            Ongkir
+          </p>
+
+          <p class="text-[22px] text-[#64748B]">
+            Rp 15.000
+          </p>
+        </div>
+
+        <div class="border-t pt-6 flex items-center justify-between">
+
+          <h3 class="text-[28px] font-bold text-[#1b2433]">
+            Total
+          </h3>
+
+          <h3 class="text-[28px] font-extrabold text-[#2492ff]">
+            Rp 20.000
+          </h3>
+
+        </div>
+
+        <button class="w-full h-[78px] rounded-full bg-[#dceeff] text-[#64748B] text-[22px] font-semibold mt-5">
+          Bayar Sekarang
+        </button>
+
+        <div class="w-full h-[78px] rounded-3xl bg-[#f3f7fb] flex items-center justify-center text-[20px] text-[#64748B]">
+          Estimasi pengiriman:
+          <span class="font-bold text-[#1b2433] ml-2">
+            2-3 hari kerja
+          </span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gradient-to-r from-[#162033] to-[#28344a] text-white mt-20">
+
+    <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16">
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-14">
+
+        <!-- Brand -->
+        <div>
+
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded-full bg-[#2492ff] flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 3s-6 7-6 11a6 6 0 0012 0c0-4-6-11-6-11z" />
+              </svg>
+            </div>
+
+            <h2 class="text-[28px] font-bold">
+              AirAlam
+            </h2>
+          </div>
+
+          <p class="text-slate-300 text-[15px] leading-relaxed">
+            Kesegaran alami dalam setiap tetes untuk gaya hidup sehat dan modern.
+          </p>
+
+        </div>
+
+        <!-- Menu -->
+        <div>
+          <h3 class="text-[24px] font-bold mb-6">
+            Menu
+          </h3>
+
+          <div class="space-y-4 text-slate-300 text-[15px]">
+            <p>Home</p>
+            <p>Tentang</p>
+            <p>Brand</p>
+            <p>Produk</p>
+          </div>
+        </div>
+
+        <!-- Produk -->
+        <div>
+          <h3 class="text-[24px] font-bold mb-6">
+            Produk
+          </h3>
+
+          <div class="space-y-4 text-slate-300 text-[15px]">
+            <p>AirAlam 330ml</p>
+            <p>AirAlam 600ml</p>
+            <p>AirAlam 1.5L</p>
+            <p>AirAlam Sparkling</p>
+          </div>
+        </div>
+
+        <!-- Kontak -->
+        <div>
+          <h3 class="text-[24px] font-bold mb-6">
+            Hubungi Kami
+          </h3>
+
+          <div class="space-y-4 text-slate-300 text-[15px]">
+            <p>info@airalam.co.id</p>
+            <p>+62 812 3456 7890</p>
+            <p>@airalam.official</p>
+            <p>Tangerang, Indonesia</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="border-t border-white/10 mt-14 pt-8 text-center text-slate-400 text-[15px]">
+        © 2026 AirAlam. Natural Freshness Everyday.
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>

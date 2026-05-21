@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AirAlam 220ml - Detail Produk</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        outfit: ['Outfit', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                        jakarta: ['Plus Jakarta Sans', 'sans-serif'],
+                        allura: ['Allura', 'cursive'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .btn-ripple {
+            position: relative;
+            overflow: hidden;
+        }
+        .ripple-effect {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.4);
+            transform: scale(0);
+            animation: ripple-animation 0.6s linear;
+            pointer-events: none;
+        }
+        @keyframes ripple-animation {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+
+<body class="bg-[#F8FAFC] font-jakarta antialiased text-[#1E293B] overflow-x-hidden">  
+    <div id="navbar-container"></div>
+ 
+    <script>
+        fetch('../navbar/navbar.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Gagal memuat komponen navbar.");
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error:', error));
+    </script>
+         
+    <div class="max-w-7xl px-6 mx-auto pt-24 md:px-6 text-[20px] font-medium" data-aos="fade-down">
+        <a href="../produk/produk.html" class="text-[#2196F3] hover:text-[#0EA5E9] text-[20px] font-medium flex items-center gap-2 font-inter transition-all duration-300 hover:-translate-x-1">
+            <span style="font-weight: extrabold; font-size: 1.5rem; display: inline-block; vertical-align: middle;">&larr;</span> Kembali
+        </a>
+    </div>
+
+    <section class="max-w-6xl mx-auto px-6 py-12 grid md:grid-cols-2 gap-12 items-center">
+        <div class="bg-white rounded-3xl shadow-sm border border-slate-100 flex justify-center items-center h-[500px] w-[400px] mx-auto transition-all duration-500 hover:shadow-xl relative overflow-hidden" 
+     data-aos="fade-right" 
+     data-tilt 
+     data-tilt-max="10" 
+     data-tilt-speed="400" 
+     data-tilt-glare="true" 
+     data-tilt-max-glare="0.2">
+     
+    <div class="w-40 h-56 bg-[#0EA5E9]/10 mx-auto rounded-full blur-xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 animate-pulse"></div>
+    
+    <img src="../img/220ml.png" alt="AirAlam 220ml" class="h-full w-full p-8 object-contain relative z-10 mix-blend-multiply transition-transform duration-500 group-hover:scale-105">
+</div>
+
+        <div class="font-inter px-6" data-aos="fade-left">
+            <span class="bg-[#E0F2FE] text-[#0EA5E9] text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider font-outfit inline-block dynamic-badge">220ml</span>
+            <h1 class="text-4xl font-bold text-[#0F172A] mt-3 mb-2 font-outfit">AirAlam 220ml</h1>
+            <p class="text-2xl font-bold text-[#0EA5E9] mb-4 font-outfit">Rp 1.800</p>
+            <p class="text-sm text-slate-500 leading-relaxed mb-6">
+                AirAlam 220ml hadir sebagai air mineral praktis untuk kebutuhan sehari-hari. Ukuran mini yang pas membuatnya cocok untuk anak-anak, perjalanan singkat, dan kebutuhan sekali minum.
+            </p>
+
+            <h3 class="text-[24px] uppercase tracking-wider font-semibold text-[#1A2332] mb-3 font-inter">Keunggulan</h3>
+            <ul class="space-y-4 text-sm text-slate-600 font-inter">
+                <li class="flex items-center gap-3 list-item-anim">
+                    <span class="flex items-center justify-center w-6 h-6 rounded-full bg-transparent border-[2px] border-blue-500 shrink-0 icon-check">
+                        <span class="text-[#2196F3] font-bold">&check;</span>
+                    </span>
+                    Ukuran sekali minum
+                </li>
+                <li class="flex items-center gap-3 list-item-anim">
+                    <span class="flex items-center justify-center w-6 h-6 rounded-full bg-transparent border-[2px] border-blue-500 shrink-0 icon-check">
+                        <span class="text-[#2196F3] font-bold">&check;</span>
+                    </span>
+                    Ringan dan compact
+                </li>
+                <li class="flex items-center gap-3 list-item-anim">
+                    <span class="flex items-center justify-center w-6 h-6 rounded-full bg-transparent border-[2px] border-blue-500 shrink-0 icon-check">
+                        <span class="text-[#2196F3] font-bold">&check;</span>
+                    </span>
+                    Harga ekonomis
+                </li>
+                <li class="flex items-center gap-3 list-item-anim">
+                    <span class="flex items-center justify-center w-6 h-6 rounded-full bg-transparent border-[2px] border-blue-500 shrink-0 icon-check">
+                        <span class="text-[#2196F3] font-bold">&check;</span>
+                    </span>
+                    Cocok untuk aktivitas ringan
+                </li>
+            </ul>
+
+            <button id="btn-pesan" class="btn-ripple mt-8 bg-gradient-to-r from-[#2196F3] to-[#389FF4] hover:from-[#0EA5E9] hover:to-[#2196F3] text-white px-8 py-3 rounded-full font-medium shadow-lg shadow-sky-100 hover:shadow-sky-200 font-outfit transition-all duration-300 transform active:scale-95">
+                Pesan Sekarang
+            </button>
+        </div>
+    </section>
+
+    <section class="bg-slate-100 py-16 text-[#1A2332] text-center overflow-hidden">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-2xl font-bold mb-2 font-outfit" data-aos="fade-up">Spesifikasi Produk</h2>
+            <p class="text-md mb-10 font-inter" data-aos="fade-up" data-aos-delay="100">Informasi detail tentang produk AirAlam 220ml</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
+                <div class="bg-white text-slate-800 p-4 rounded-xl flex items-center gap-4 transition-all duration-300 hover:shadow-md hover:-translate-y-1" data-aos="zoom-in-up" data-aos-delay="100">
+                    <div class="w-10 h-10 rounded-full bg-[#0EA5E9]/10 flex items-center justify-center text-[#0EA5E9] font-bold svg-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 20C0 8.95431 8.9543 0 20 0H28C39.0457 0 48 8.9543 48 20V28C48 39.0457 39.0457 48 28 48H20C8.95431 48 0 39.0457 0 28V20Z" fill="url(#paint0_linear_106_67)"/><path d="M23 33.73C23.304 33.9055 23.6489 33.9979 24 33.9979C24.3511 33.9979 24.696 33.9055 25 33.73L32 29.73C32.3037 29.5546 32.556 29.3025 32.7315 28.9988C32.9071 28.6952 32.9996 28.3507 33 28V20C32.9996 19.6493 32.9071 19.3048 32.7315 19.0012C32.556 18.6975 32.3037 18.4454 32 18.27L25 14.27C24.696 14.0945 24.3511 14.002 24 14.002C23.6489 14.002 23.304 14.0945 23 14.27L16 18.27C15.6963 18.4454 15.444 18.6975 15.2685 19.0012C15.0929 19.3048 15.0004 19.6493 15 20V28C15.0004 28.3507 15.0929 28.6952 15.2685 28.9988C15.444 29.3025 15.6963 29.5546 16 29.73L23 33.73Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 34V24" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15.29 19L24 24L32.71 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19.5 16.27L28.5 21.42" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="paint0_linear_106_67" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse"><stop stop-color="#2196F3"/><stop offset="0.0909091" stop-color="#2A99F3"/><stop offset="0.181818" stop-color="#319CF4"/><stop offset="0.272727" stop-color="#389FF4"/><stop offset="0.363636" stop-color="#3EA1F4"/><stop offset="0.454545" stop-color="#44A4F5"/><stop offset="0.545455" stop-color="#4AA7F5"/><stop offset="0.636364" stop-color="#4FAAF5"/><stop offset="0.727273" stop-color="#55ADF5"/><stop offset="0.818182" stop-color="#5AAFF6"/><stop offset="0.909091" stop-color="#5FB2F6"/><stop offset="1" stop-color="#64B5F6"/></linearGradient></defs></svg>
+                    </div>
+                    <div>
+                        <p class="text-xs text-slate-400 font-inter">Volume</p>
+                        <p class="font-semibold text-sm font-outfit">220ml</p>
+                    </div>
+                </div>
+                <div class="bg-white text-slate-800 p-4 rounded-xl flex items-center gap-4 transition-all duration-300 hover:shadow-md hover:-translate-y-1" data-aos="zoom-in-up" data-aos-delay="200">
+                    <div class="w-10 h-10 rounded-full bg-[#0EA5E9]/10 flex items-center justify-center text-[#0EA5E9] font-bold svg-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 20C0 8.95431 8.9543 0 20 0H28C39.0457 0 48 8.9543 48 20V28C48 39.0457 39.0457 48 28 48H20C8.95431 48 0 39.0457 0 28V20Z" fill="url(#paint0_linear_106_67)"/><path d="M23 33.73C23.304 33.9055 23.6489 33.9979 24 33.9979C24.3511 33.9979 24.696 33.9055 25 33.73L32 29.73C32.3037 29.5546 32.556 29.3025 32.7315 28.9988C32.9071 28.6952 32.9996 28.3507 33 28V20C32.9996 19.6493 32.9071 19.3048 32.7315 19.0012C32.556 18.6975 32.3037 18.4454 32 18.27L25 14.27C24.696 14.0945 24.3511 14.002 24 14.002C23.6489 14.002 23.304 14.0945 23 14.27L16 18.27C15.6963 18.4454 15.444 18.6975 15.2685 19.0012C15.0929 19.3048 15.0004 19.6493 15 20V28C15.0004 28.3507 15.0929 28.6952 15.2685 28.9988C15.444 29.3025 15.6963 29.5546 16 29.73L23 33.73Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 34V24" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15.29 19L24 24L32.71 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19.5 16.27L28.5 21.42" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="paint0_linear_106_67" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse"><stop stop-color="#2196F3"/><stop offset="0.0909091" stop-color="#2A99F3"/><stop offset="0.181818" stop-color="#319CF4"/><stop offset="0.272727" stop-color="#389FF4"/><stop offset="0.363636" stop-color="#3EA1F4"/><stop offset="0.454545" stop-color="#44A4F5"/><stop offset="0.545455" stop-color="#4AA7F5"/><stop offset="0.636364" stop-color="#4FAAF5"/><stop offset="0.727273" stop-color="#55ADF5"/><stop offset="0.818182" stop-color="#5AAFF6"/><stop offset="0.909091" stop-color="#5FB2F6"/><stop offset="1" stop-color="#64B5F6"/></linearGradient></defs></svg>
+                    </div>
+                    <div>
+                        <p class="text-xs text-slate-400 font-inter">Material</p>
+                        <p class="font-semibold text-sm font-outfit">PET Food Grade</p>
+                    </div>
+                </div>
+                <div class="bg-white text-slate-800 p-4 rounded-xl flex items-center gap-4 transition-all duration-300 hover:shadow-md hover:-translate-y-1" data-aos="zoom-in-up" data-aos-delay="300">
+                    <div class="w-10 h-10 rounded-full bg-[#0EA5E9]/10 flex items-center justify-center text-[#0EA5E9] font-bold svg-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 20C0 8.95431 8.9543 0 20 0H28C39.0457 0 48 8.9543 48 20V28C48 39.0457 39.0457 48 28 48H20C8.95431 48 0 39.0457 0 28V20Z" fill="url(#paint0_linear_106_67)"/><path d="M23 33.73C23.304 33.9055 23.6489 33.9979 24 33.9979C24.3511 33.9979 24.696 33.9055 25 33.73L32 29.73C32.3037 29.5546 32.556 29.3025 32.7315 28.9988C32.9071 28.6952 32.9996 28.3507 33 28V20C32.9996 19.6493 32.9071 19.3048 32.7315 19.0012C32.556 18.6975 32.3037 18.4454 32 18.27L25 14.27C24.696 14.0945 24.3511 14.002 24 14.002C23.6489 14.002 23.304 14.0945 23 14.27L16 18.27C15.6963 18.4454 15.444 18.6975 15.2685 19.0012C15.0929 19.3048 15.0004 19.6493 15 20V28C15.0004 28.3507 15.0929 28.6952 15.2685 28.9988C15.444 29.3025 15.6963 29.5546 16 29.73L23 33.73Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 34V24" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15.29 19L24 24L32.71 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19.5 16.27L28.5 21.42" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="paint0_linear_106_67" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse"><stop stop-color="#2196F3"/><stop offset="0.0909091" stop-color="#2A99F3"/><stop offset="0.181818" stop-color="#319CF4"/><stop offset="0.272727" stop-color="#389FF4"/><stop offset="0.363636" stop-color="#3EA1F4"/><stop offset="0.454545" stop-color="#44A4F5"/><stop offset="0.545455" stop-color="#4AA7F5"/><stop offset="0.636364" stop-color="#4FAAF5"/><stop offset="0.727273" stop-color="#55ADF5"/><stop offset="0.818182" stop-color="#5AAFF6"/><stop offset="0.909091" stop-color="#5FB2F6"/><stop offset="1" stop-color="#64B5F6"/></linearGradient></defs></svg>
+                    </div>
+                    <div>
+                        <p class="text-xs text-slate-400 font-inter">pH</p>
+                        <p class="font-semibold text-sm font-outfit">7.0 - 7.5</p>
+                    </div>
+                </div>
+                <div class="bg-white text-slate-800 p-4 rounded-xl flex items-center gap-4 transition-all duration-300 hover:shadow-md hover:-translate-y-1" data-aos="zoom-in-up" data-aos-delay="400">
+                    <div class="w-10 h-10 rounded-full bg-[#0EA5E9]/10 flex items-center justify-center text-[#0EA5E9] font-bold svg-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 20C0 8.95431 8.9543 0 20 0H28C39.0457 0 48 8.9543 48 20V28C48 39.0457 39.0457 48 28 48H20C8.95431 48 0 39.0457 0 28V20Z" fill="url(#paint0_linear_106_67)"/><path d="M23 33.73C23.304 33.9055 23.6489 33.9979 24 33.9979C24.3511 33.9979 24.696 33.9055 25 33.73L32 29.73C32.3037 29.5546 32.556 29.3025 32.7315 28.9988C32.9071 28.6952 32.9996 28.3507 33 28V20C32.9996 19.6493 32.9071 19.3048 32.7315 19.0012C32.556 18.6975 32.3037 18.4454 32 18.27L25 14.27C24.696 14.0945 24.3511 14.002 24 14.002C23.6489 14.002 23.304 14.0945 23 14.27L16 18.27C15.6963 18.4454 15.444 18.6975 15.2685 19.0012C15.0929 19.3048 15.0004 19.6493 15 20V28C15.0004 28.3507 15.0929 28.6952 15.2685 28.9988C15.444 29.3025 15.6963 29.5546 16 29.73L23 33.73Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 34V24" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15.29 19L24 24L32.71 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19.5 16.27L28.5 21.42" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="paint0_linear_106_67" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse"><stop stop-color="#2196F3"/><stop offset="0.0909091" stop-color="#2A99F3"/><stop offset="0.181818" stop-color="#319CF4"/><stop offset="0.272727" stop-color="#389FF4"/><stop offset="0.363636" stop-color="#3EA1F4"/><stop offset="0.454545" stop-color="#44A4F5"/><stop offset="0.545455" stop-color="#4AA7F5"/><stop offset="0.636364" stop-color="#4FAAF5"/><stop offset="0.727273" stop-color="#55ADF5"/><stop offset="0.818182" stop-color="#5AAFF6"/><stop offset="0.909091" stop-color="#5FB2F6"/><stop offset="1" stop-color="#64B5F6"/></linearGradient></defs></svg>
+                    </div>
+                    <div>
+                        <p class="text-xs text-slate-400 font-inter">Mineral</p>
+                        <p class="font-semibold text-sm font-outfit">Kalsium, Magnesium</p>
+                    </div>
+                </div>
+                <div class="bg-white text-slate-800 p-4 rounded-xl flex items-center gap-4 transition-all duration-300 hover:shadow-md hover:-translate-y-1" data-aos="zoom-in-up" data-aos-delay="500">
+                    <div class="w-10 h-10 rounded-full bg-[#0EA5E9]/10 flex items-center justify-center text-[#0EA5E9] font-bold svg-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 20C0 8.95431 8.9543 0 20 0H28C39.0457 0 48 8.9543 48 20V28C48 39.0457 39.0457 48 28 48H20C8.95431 48 0 39.0457 0 28V20Z" fill="url(#paint0_linear_106_67)"/><path d="M23 33.73C23.304 33.9055 23.6489 33.9979 24 33.9979C24.3511 33.9979 24.696 33.9055 25 33.73L32 29.73C32.3037 29.5546 32.556 29.3025 32.7315 28.9988C32.9071 28.6952 32.9996 28.3507 33 28V20C32.9996 19.6493 32.9071 19.3048 32.7315 19.0012C32.556 18.6975 32.3037 18.4454 32 18.27L25 14.27C24.696 14.0945 24.3511 14.002 24 14.002C23.6489 14.002 23.304 14.0945 23 14.27L16 18.27C15.6963 18.4454 15.444 18.6975 15.2685 19.0012C15.0929 19.3048 15.0004 19.6493 15 20V28C15.0004 28.3507 15.0929 28.6952 15.2685 28.9988C15.444 29.3025 15.6963 29.5546 16 29.73L23 33.73Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 34V24" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15.29 19L24 24L32.71 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19.5 16.27L28.5 21.42" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="paint0_linear_106_67" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse"><stop stop-color="#2196F3"/><stop offset="0.0909091" stop-color="#2A99F3"/><stop offset="0.181818" stop-color="#319CF4"/><stop offset="0.272727" stop-color="#389FF4"/><stop offset="0.363636" stop-color="#3EA1F4"/><stop offset="0.454545" stop-color="#44A4F5"/><stop offset="0.545455" stop-color="#4AA7F5"/><stop offset="0.636364" stop-color="#4FAAF5"/><stop offset="0.727273" stop-color="#55ADF5"/><stop offset="0.818182" stop-color="#5AAFF6"/><stop offset="0.909091" stop-color="#5FB2F6"/><stop offset="1" stop-color="#64B5F6"/></linearGradient></defs></svg>
+                    </div>
+                    <div>
+                        <p class="text-xs text-slate-400 font-inter">Shelf</p>
+                        <p class="font-semibold text-sm font-outfit">12 Bulan</p>
+                    </div>
+                </div>
+                <div class="bg-white text-slate-800 p-4 rounded-xl flex items-center gap-4 transition-all duration-300 hover:shadow-md hover:-translate-y-1" data-aos="zoom-in-up" data-aos-delay="600">
+                    <div class="w-10 h-10 rounded-full bg-[#0EA5E9]/10 flex items-center justify-center text-[#0EA5E9] font-bold svg-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 20C0 8.95431 8.9543 0 20 0H28C39.0457 0 48 8.9543 48 20V28C48 39.0457 39.0457 48 28 48H20C8.95431 48 0 39.0457 0 28V20Z" fill="url(#paint0_linear_106_67)"/><path d="M23 33.73C23.304 33.9055 23.6489 33.9979 24 33.9979C24.3511 33.9979 24.696 33.9055 25 33.73L32 29.73C32.3037 29.5546 32.556 29.3025 32.7315 28.9988C32.9071 28.6952 32.9996 28.3507 33 28V20C32.9996 19.6493 32.9071 19.3048 32.7315 19.0012C32.556 18.6975 32.3037 18.4454 32 18.27L25 14.27C24.696 14.0945 24.3511 14.002 24 14.002C23.6489 14.002 23.304 14.0945 23 14.27L16 18.27C15.6963 18.4454 15.444 18.6975 15.2685 19.0012C15.0929 19.3048 15.0004 19.6493 15 20V28C15.0004 28.3507 15.0929 28.6952 15.2685 28.9988C15.444 29.3025 15.6963 29.5546 16 29.73L23 33.73Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 34V24" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15.29 19L24 24L32.71 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19.5 16.27L28.5 21.42" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="paint0_linear_106_67" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse"><stop stop-color="#2196F3"/><stop offset="0.0909091" stop-color="#2A99F3"/><stop offset="0.181818" stop-color="#319CF4"/><stop offset="0.272727" stop-color="#389FF4"/><stop offset="0.363636" stop-color="#3EA1F4"/><stop offset="0.454545" stop-color="#44A4F5"/><stop offset="0.545455" stop-color="#4AA7F5"/><stop offset="0.636364" stop-color="#4FAAF5"/><stop offset="0.727273" stop-color="#55ADF5"/><stop offset="0.818182" stop-color="#5AAFF6"/><stop offset="0.909091" stop-color="#5FB2F6"/><stop offset="1" stop-color="#64B5F6"/></linearGradient></defs></svg>
+                    </div>
+                    <div>
+                        <p class="text-xs text-slate-400 font-inter">Bpa</p>
+                        <p class="font-semibold text-sm font-outfit">BPA Free</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-5xl mx-auto px-6 py-20 text-center">
+        <h2 class="text-2xl font-bold mb-2 font-outfit" data-aos="fade-up">Kenapa Memilih AirAlam Mineral 220ml?</h2>
+        <p class="text-slate-400 text-sm mb-12 font-inter" data-aos="fade-up" data-aos-delay="100">Manfaat yang Anda dapat dari produk ini</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+            <div class="bg-blue-50 p-6 rounded-2xl border border-slate-100 shadow-sm flex gap-4 items-start transition-all duration-300 hover:bg-sky-100/50 hover:shadow-md" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-sky-50 text-[#0EA5E9] rounded-xl font-bold font-inter flex items-center justify-center svg-icon">
+                    <svg width="50" height="50" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 16C0 7.16344 7.16344 0 16 0H40C48.8366 0 56 7.16344 56 16V40C56 48.8366 48.8366 56 40 56H16C7.16344 56 0 48.8366 0 40V16Z" fill="url(#paint0_linear_100_3788)"/><path d="M27.9997 39.6667C30.1656 39.6667 32.2428 38.8063 33.7744 37.2747C35.3059 35.7432 36.1663 33.6659 36.1663 31.5C36.1663 29.1667 34.9997 26.95 32.6663 25.0833C30.333 23.2167 28.583 20.4167 27.9997 17.5C27.4163 20.4167 25.6663 23.2167 23.333 25.0833C20.9997 26.95 19.833 29.1667 19.833 31.5C19.833 33.6659 20.6934 35.7432 22.225 37.2747C23.7565 38.8063 25.8337 39.6667 27.9997 39.6667Z" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="paint0_linear_100_3788" x1="0" y1="0" x2="56" y2="56" gradientUnits="userSpaceOnUse"><stop stop-color="#2196F3"/><stop offset="0.0909091" stop-color="#2A99F3"/><stop offset="0.181818" stop-color="#319CF4"/><stop offset="0.272727" stop-color="#389FF4"/><stop offset="0.363636" stop-color="#3EA1F4"/><stop offset="0.454545" stop-color="#44A4F5"/><stop offset="0.545455" stop-color="#4AA7F5"/><stop offset="0.636364" stop-color="#4FAAF5"/><stop offset="0.727273" stop-color="#55ADF5"/><stop offset="0.818182" stop-color="#5AAFF6"/><stop offset="0.909091" stop-color="#5FB2F6"/><stop offset="1" stop-color="#64B5F6"/></linearGradient></defs></svg>
+                </div>
+                <div>
+                    <p class="text-sm text-slate-500 w-[300px] leading-relaxed">Ukuran ideal yang langsung habis dalam sekali minum</p>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 p-6 rounded-2xl border border-slate-100 shadow-sm flex gap-4 items-start transition-all duration-300 hover:bg-sky-100/50 hover:shadow-md" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-sky-50 text-[#0EA5E9] rounded-xl font-bold font-inter flex items-center justify-center svg-icon">
+                    <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 16C0 7.16344 7.16344 0 16 0H40C48.8366 0 56 7.16344 56 16V40C56 48.8366 48.8366 56 40 56H16C7.16344 56 0 48.8366 0 40V16Z" fill="url(#paint0_linear_100_3801)"/><path d="M26.833 37.3334C24.7844 37.3396 22.8083 36.5756 21.2966 35.193C19.7849 33.8104 18.8481 31.9102 18.6719 29.8692C18.4957 27.8282 19.093 25.7955 20.3454 24.1742C21.5977 22.553 23.4137 21.4617 25.433 21.1167C32.083 19.8334 33.833 19.2267 36.1664 16.3334C37.333 18.6667 38.4997 21.21 38.4997 25.6667C38.4997 32.0834 32.923 37.3334 26.833 37.3334Z" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"/><path d="M16.333 38.5C16.333 35 18.4913 32.2467 22.2597 31.5C25.083 30.94 27.9997 29.1667 29.1663 28" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="paint0_linear_100_3801" x1="0" y1="0" x2="56" y2="56" gradientUnits="userSpaceOnUse"><stop stop-color="#2196F3"/><stop offset="0.0909091" stop-color="#2A99F3"/><stop offset="0.181818" stop-color="#319CF4"/><stop offset="0.272727" stop-color="#389FF4"/><stop offset="0.363636" stop-color="#3EA1F4"/><stop offset="0.454545" stop-color="#44A4F5"/><stop offset="0.545455" stop-color="#4AA7F5"/><stop offset="0.636364" stop-color="#4FAAF5"/><stop offset="0.727273" stop-color="#55ADF5"/><stop offset="0.818182" stop-color="#5AAFF6"/><stop offset="0.909091" stop-color="#5FB2F6"/><stop offset="1" stop-color="#64B5F6"/></linearGradient></defs></svg>
+                </div>
+                <div>
+                    <p class="text-sm text-slate-500 w-[300px] leading-relaxed">Mudah ditata di meja dan tidak memakan banyak tempat.</p>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 p-6 rounded-2xl border border-slate-100 shadow-sm flex gap-4 items-start transition-all duration-300 hover:bg-sky-100/50 hover:shadow-md" data-aos="fade-up" data-aos-delay="300">
+                <div class="bg-sky-50 text-[#0EA5E9] rounded-xl font-bold font-inter flex items-center justify-center svg-icon">
+                    <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 16C0 7.16344 7.16344 0 16 0H40C48.8366 0 56 7.16344 56 16V40C56 48.8366 48.8366 56 40 56H16C7.16344 56 0 48.8366 0 40V16Z" fill="url(#paint0_linear_100_3794)"/><path d="M37.3337 29.1666C37.3337 35 33.2503 37.9166 28.397 39.6083C28.1428 39.6944 27.8668 39.6903 27.6153 39.5966C22.7503 37.9166 18.667 35 18.667 29.1666V21C18.667 20.6905 18.7899 20.3938 19.0087 20.175C19.2275 19.9562 19.5242 19.8333 19.8337 19.8333C22.167 19.8333 25.0837 18.4333 27.1137 16.66C27.3608 16.4488 27.6752 16.3328 28.0003 16.3328C28.3254 16.3328 28.6398 16.4488 28.887 16.66C30.9287 18.4454 33.8337 19.8333 36.167 19.8333C36.4764 19.8333 36.7732 19.9562 36.992 20.175C37.2107 20.3938 37.3337 20.6905 37.3337 21V29.1666Z" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="paint0_linear_100_3794" x1="0" y1="0" x2="56" y2="56" gradientUnits="userSpaceOnUse"><stop stop-color="#2196F3"/><stop offset="0.0909091" stop-color="#2A99F3"/><stop offset="0.181818" stop-color="#319CF4"/><stop offset="0.272727" stop-color="#389FF4"/><stop offset="0.363636" stop-color="#3EA1F4"/><stop offset="0.454545" stop-color="#44A4F5"/><stop offset="0.545455" stop-color="#4AA7F5"/><stop offset="0.636364" stop-color="#4FAAF5"/><stop offset="0.727273" stop-color="#55ADF5"/><stop offset="0.818182" stop-color="#5AAFF6"/><stop offset="0.909091" stop-color="#5FB2F6"/><stop offset="1" stop-color="#64B5F6"/></linearGradient></defs></svg>
+                </div>
+                <div>
+                    <p class="text-sm text-slate-500 w-[300px] leading-relaxed">Solusi hidrasi terjangkau dengan kualitas mineral tetap terjaga</p>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 p-6 rounded-2xl border border-slate-100 shadow-sm flex gap-4 items-start transition-all duration-300 hover:bg-sky-100/50 hover:shadow-md" data-aos="fade-up" data-aos-delay="400">
+                <div class="bg-sky-50 text-[#0EA5E9] rounded-xl font-bold font-inter flex items-center justify-center svg-icon">
+                    <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 16C0 7.16344 7.16344 0 16 0H40C48.8366 0 56 7.16344 56 16V40C56 48.8366 48.8366 56 40 56H16C7.16344 56 0 48.8366 0 40V16Z" fill="url(#paint0_linear_100_3808)"/><path d="M26.8333 39.3516C27.188 39.5564 27.5904 39.6642 28 39.6642C28.4096 39.6642 28.812 39.5564 29.1667 39.3516L37.3333 34.685 Gold" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"/><path d="M28 39.6667V28" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"/><path d="M17.8379 22.1666L27.9996 28L38.1612 22.1666" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"/><path d="M22.75 18.9817L33.25 24.99" stroke="white" stroke-width="2.33333" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="paint0_linear_100_3808" x1="0" y1="0" x2="56" y2="56" gradientUnits="userSpaceOnUse"><stop stop-color="#2196F3"/><stop offset="0.0909091" stop-color="#2A99F3"/><stop offset="0.181818" stop-color="#319CF4"/><stop offset="0.272727" stop-color="#389FF4"/><stop offset="0.363636" stop-color="#3EA1F4"/><stop offset="0.454545" stop-color="#44A4F5"/><stop offset="0.545455" stop-color="#4AA7F5"/><stop offset="0.636364" stop-color="#4FAAF5"/><stop offset="0.727273" stop-color="#55ADF5"/><stop offset="0.818182" stop-color="#5AAFF6"/><stop offset="0.909091" stop-color="#5FB2F6"/><stop offset="1" stop-color="#64B5F6"/></linearGradient></defs></svg>
+                </div>
+                <div>
+                    <p class="text-sm text-slate-500 w-[300px] leading-relaxed">Cocok untuk menjamu tamu, rapat kantor, hingga acara besar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-slate-50 py-16 text-black text-center font-inter overflow-hidden">
+        <div class="max-w-[80%] mx-auto">
+            <h2 class="text-3xl font-extrabold mb-2" data-aos="fade-up">Informasi Kandungan</h2>
+            <p class="text-sm text-slate-500 font-semibold mb-8 font-inter" data-aos="fade-up" data-aos-delay="100">Kandungan gizi per botol 220ml</p>
+
+            <div class="bg-white text-slate-800 rounded-2xl p-10 shadow-sm space-y-4 text-left font-inter max-w-2xl mx-auto" data-aos="zoom-in" data-aos-delay="200">
+                <div class="flex justify-between border-b pb-2 text-sm row-nutrisi">
+                    <span class="font-medium">Kalsium</span> <span class="text-slate-500 font-bold text-[#0EA5E9]">1.2 mg</span>
+                </div>
+                <div class="flex justify-between border-b pb-2 text-sm row-nutrisi">
+                    <span class="font-medium">Magnesium</span> <span class="text-slate-500 font-bold text-[#0EA5E9]">0.4 mg</span>
+                </div>
+                <div class="flex justify-between border-b pb-2 text-sm row-nutrisi">
+                    <span class="font-medium">Natrium</span> <span class="text-slate-500 font-bold text-[#0EA5E9]">0.15 mg</span>
+                </div>
+                <div class="flex justify-between text-sm row-nutrisi">
+                    <span class="font-medium">Kalium</span> <span class="text-slate-500 font-bold text-[#0EA5E9]">0.1 mg</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-5xl mx-auto px-6 py-10 text-center">
+        <h2 class="text-2xl font-bold mb-2 font-outfit" data-aos="fade-up">Produk Lainnya</h2>
+        <p class="text-slate-400 text-sm mb-12 font-inter" data-aos="fade-up" data-aos-delay="100">Lihat produk AirAlam lain yang mungkin Anda sukai</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white border border-slate-100 rounded-2xl p-4 shadow-sm text-left transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-slate-50 rounded-xl p-4 mb-4 flex justify-center overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1608248597481-496100c8c836?w=200&auto=format&fit=crop&q=60" alt="330ml" class="h-32 object-contain mix-blend-multiply transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <h4 class="font-semibold text-slate-800 font-outfit text-sm">AirAlam Mineral 330ml</h4>
+                <p class="text-[#0EA5E9] font-bold text-sm mt-1 mb-3">Rp 2.500</p>
+                <a href="#" class="text-xs text-slate-400 group-hover:text-[#0EA5E9] font-medium flex items-center gap-1 font-inter transition-colors duration-300">Lihat Detail <span class="transition-transform duration-300 group-hover:translate-x-1">&rarr;</span></a>
+            </div>
+            <div class="bg-white border border-slate-100 rounded-2xl p-4 shadow-sm text-left transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-slate-50 rounded-xl p-4 mb-4 flex justify-center overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1608248597481-496100c8c836?w=200&auto=format&fit=crop&q=60" alt="500ml" class="h-32 object-contain mix-blend-multiply transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <h4 class="font-semibold text-slate-800 font-outfit text-sm">AirAlam Case 500ml</h4>
+                <p class="text-[#0EA5E9] font-bold text-sm mt-1 mb-3">Rp 12.000</p>
+                <a href="#" class="text-xs text-slate-400 group-hover:text-[#0EA5E9] font-medium flex items-center gap-1 font-inter transition-colors duration-300">Lihat Detail <span class="transition-transform duration-300 group-hover:translate-x-1">&rarr;</span></a>
+            </div>
+            <div class="bg-white border border-slate-100 rounded-2xl p-4 shadow-sm text-left transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group" data-aos="fade-up" data-aos-delay="300">
+                <div class="bg-slate-50 rounded-xl p-4 mb-4 flex justify-center overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1608248597481-496100c8c836?w=200&auto=format&fit=crop&q=60" alt="600ml" class="h-32 object-contain mix-blend-multiply transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <h4 class="font-semibold text-slate-800 font-outfit text-sm">AirAlam Mineral 600ml</h4>
+                <p class="text-[#0EA5E9] font-bold text-sm mt-1 mb-3">Rp 3.500</p>
+                <a href="#" class="text-xs text-slate-400 group-hover:text-[#0EA5E9] font-medium flex items-center gap-1 font-inter transition-colors duration-300">Lihat Detail <span class="transition-transform duration-300 group-hover:translate-x-1">&rarr;</span></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="overflow-hidden">
+        <div class="max-w-full h-[250px] mx-auto bg-gradient-to-r from-[#2196F3] to-[#0EA5E9] flex flex-col justify-center items-center mt-20 text-center text-white shadow-xl shadow-sky-100" data-aos="zoom-in">
+            <h2 class="text-2xl md:text-3xl font-bold mb-3 font-outfit">Tertarik dengan AirAlam Mineral 220ml?</h2>
+            <p class="text-sky-100 text-sm mb-6 font-inter max-w-lg mx-auto px-4">Hubungi kami untuk informasi pemesanan dan harga grosir partai besar.</p>
+            <button class="bg-white text-[#0EA5E9] font-semibold px-8 py-3 rounded-full hover:bg-sky-50 transition-all duration-300 font-outfit shadow-md hover:shadow-lg hover:-translate-y-0.5 active:scale-95">Hubungi Kami Sekarang</button>
+        </div>
+    </section>
+
+    <footer class="bg-gradient-to-r from-[#162033] to-[#28344a] text-white">
+        <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-14">
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-full bg-[#2492ff] flex items-center justify-center animate-bounce" style="animation-duration: 3s;">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3s-6 7-6 11a6 6 0 0012 0c0-4-6-11-6-11z" />
+                            </svg>
+                        </div>
+                        <h2 class="text-[28px] font-bold">AirAlam</h2>
+                    </div>
+                    <p class="text-slate-300 text-[15px] leading-relaxed">Kesegaran alami dalam setiap tetes untuk gaya hidup sehat dan modern.</p>
+                </div>
+                <div>
+                    <h3 class="text-[24px] font-bold mb-6">Menu</h3>
+                    <div class="space-y-4 text-slate-300 text-[15px]">
+                        <p class="hover:text-sky-400 transition-colors cursor-pointer">Home</p>
+                        <p class="hover:text-sky-400 transition-colors cursor-pointer">Tentang</p>
+                        <p class="hover:text-sky-400 transition-colors cursor-pointer">Brand</p>
+                        <p class="hover:text-sky-400 transition-colors cursor-pointer">Produk</p>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-[24px] font-bold mb-6">Produk</h3>
+                    <div class="space-y-4 text-slate-300 text-[15px]">
+                        <p class="hover:text-sky-400 transition-colors cursor-pointer">AirAlam 330ml</p>
+                        <p class="hover:text-sky-400 transition-colors cursor-pointer">AirAlam 600ml</p>
+                        <p class="hover:text-sky-400 transition-colors cursor-pointer">AirAlam 1.5L</p>
+                        <p class="hover:text-sky-400 transition-colors cursor-pointer">AirAlam Sparkling</p>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-[24px] font-bold mb-6">Hubungi Kami</h3>
+                    <div class="space-y-4 text-slate-300 text-[15px]">
+                        <p>info@airalam.co.id</p>
+                        <p>+62 812 3456 7890</p>
+                        <p>@airalam.official</p>
+                        <p>Tangerang, Indonesia</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/10 mt-14 pt-8 text-center text-slate-400 text-[15px]">
+                © 2026 AirAlam. Natural Freshness Everyday.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 120
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+            // 1. ANIMASI KHUSUS: Efek Riak Air ketika tombol "Pesan Sekarang" dipencet
+            const btnPesan = document.getElementById('btn-pesan');
+            if (btnPesan) {
+                btnPesan.addEventListener('click', function(e) {
+                    // Membuat elemen span untuk efek riak lingkaran
+                    const ripple = document.createElement('span');
+                    ripple.classList.add('ripple-effect');
+                    this.appendChild(ripple);
+
+                    // Menghitung posisi koordinat klik mouse di dalam tombol
+                    const rect = this.getBoundingClientRect();
+                    const size = Math.max(rect.width, rect.height);
+                    
+                    ripple.style.width = ripple.style.height = `${size}px`;
+                    ripple.style.left = `${e.clientX - rect.left - size / 2}px`;
+                    ripple.style.top = `${e.clientY - rect.top - size / 2}px`;
+
+                    // Hapus elemen riak setelah animasi selesai (600ms)
+                    setTimeout(() => {
+                        ripple.remove();
+                    }, 600);
+                    
+                    // Opsional: Tempatkan fungsi logika pemesanan Anda di sini (misal: redirect ke WhatsApp / Checkout)
+                    console.log("Produk AirAlam dipesan!");
+                });
+            }
+
+            // Staggered List Poin Keunggulan
+            const listItems = document.querySelectorAll('.list-item-anim');
+            listItems.forEach((item, index) => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateX(-20px)';
+                item.style.transition = `all 0.5s ease-out ${index * 150}ms`;
+                setTimeout(() => {
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateX(0)';
+                }, 300);
+            });
+
+            // Hover SVG Icons
+            const specCards = document.querySelectorAll('section.bg-slate-100 .grid > div');
+            specCards.forEach(card => {
+                const svg = card.querySelector('.svg-icon');
+                if(svg) {
+                    card.addEventListener('mouseenter', () => {
+                        svg.style.transform = 'scale(1.15) rotate(5deg)';
+                        svg.style.transition = 'all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+                    });
+                    card.addEventListener('mouseleave', () => {
+                        svg.style.transform = 'scale(1) rotate(0deg)';
+                    });
+                }
+            });
+
+            // Hover Baris Nutrisi
+            const nutrisiRows = document.querySelectorAll('.row-nutrisi');
+            nutrisiRows.forEach(row => {
+                row.style.transition = 'all 0.2s ease';
+                row.addEventListener('mouseenter', () => {
+                    row.style.paddingLeft = '8px';
+                    row.style.backgroundColor = '#F0F9FF';
+                });
+                row.addEventListener('mouseleave', () => {
+                    row.style.paddingLeft = '0px';
+                    row.style.backgroundColor = 'transparent';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
