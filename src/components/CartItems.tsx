@@ -15,15 +15,6 @@ export default function CartItem({ itemId, initialQuantity }: CartItemProps) {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    // try {
-    //   const raw = localStorage.getItem("cart");
-    //   const parsed: Cart[] = raw ? JSON.parse(raw) : [];
-    //   setCartItems(parsed);
-    // } catch (error) {
-    //   console.error("Failed to parse cart:", error);
-    //   setCartItems([]);
-    // }
-    // setIsLoaded(true);
     const cart = getCart();
     setCartItems(cart);
     setIsLoaded(true);
@@ -59,36 +50,6 @@ export default function CartItem({ itemId, initialQuantity }: CartItemProps) {
     return <div>Item not found in cart</div>;
   }
 
-  // Di CartItems.tsx, tambahkan ini setelah deklarasi state:
-
-  const handleTestAddToCart = () => {
-    // Test addToCart function
-    const { addToCart } = require("@/app/lib/cart");
-    addToCart(1, 2); // Tambah 2 item dengan ID 1
-    console.log("✓ Added to cart");
-  };
-
-  const handleTestRemoveFromCart = () => {
-    // Test removeFromCart function
-    const { removeFromCart } = require("@/app/lib/cart");
-    const result = removeFromCart(1);
-    console.log("✓ Removed from cart:", result);
-  };
-
-  const handleTestGetCart = () => {
-    // Test getCart function
-    const { getCart } = require("@/app/lib/cart");
-    const cart = getCart();
-    console.log("✓ Current cart:", cart);
-  };
-
-  const handleTestClearCart = () => {
-    // Test clear cart
-    const { saveCart } = require("@/app/lib/cart");
-    saveCart([]);
-    setCartItems([]);
-    console.log("✓ Cart cleared");
-  };
   return (
     <div className="flex flex-col md:flex-row md:items-center gap-6">
       <div className="w-[120px] h-[120px] bg-[#f5f7fb] rounded-2xl flex items-center justify-center p-2">
@@ -122,32 +83,6 @@ export default function CartItem({ itemId, initialQuantity }: CartItemProps) {
               +
             </button>
           </div>
-        </div>
-        <div className="mt-8 flex flex-wrap gap-2 p-4 bg-yellow-100 rounded-lg border-2 border-yellow-400">
-          <button
-            onClick={handleTestGetCart}
-            className="px-3 py-2 bg-blue-500 text-white rounded text-sm font-bold hover:bg-blue-600"
-          >
-            Test: Get Cart
-          </button>
-          <button
-            onClick={handleTestAddToCart}
-            className="px-3 py-2 bg-green-500 text-white rounded text-sm font-bold hover:bg-green-600"
-          >
-            Test: Add to Cart
-          </button>
-          <button
-            onClick={handleTestRemoveFromCart}
-            className="px-3 py-2 bg-red-500 text-white rounded text-sm font-bold hover:bg-red-600"
-          >
-            Test: Remove from Cart
-          </button>
-          <button
-            onClick={handleTestClearCart}
-            className="px-3 py-2 bg-gray-500 text-white rounded text-sm font-bold hover:bg-gray-600"
-          >
-            Test: Clear Cart
-          </button>
         </div>
       </div>
     </div>
