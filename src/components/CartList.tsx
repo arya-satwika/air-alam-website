@@ -1,7 +1,8 @@
 import CartItems from "./CartItems"
+import { getCart } from "@/app/lib/cart"
 
 export default function CartList() {
-    const cartItems = JSON.parse(localStorage.getItem('cart') || '[]')
+    const cartItems = getCart() //JSON.parse(localStorage.getItem('cart') || '[]')
 //     const cartItems = [
 //     {
 //         id: 3,

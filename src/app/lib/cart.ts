@@ -12,6 +12,39 @@ export type Cart = {
     quantity: number
 }
 
+export function getCart(): Cart[] {
+    try {
+        const raw = localStorage.getItem("cart");
+        return raw ? JSON.parse(raw) : [];
+    } catch (error) {
+        console.log("Failed to parse cart:", error);
+        return [];
+    }
+}
+
+export function saveCart(cart: Cart[]): void{
+    localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+export function addToCart(itemId: number, quantity: number): void {
+    const cart = getCart();
+    const exisItem = cart.find(item => item.id === itemId);
+
+    if (exisItem) {
+        exisItem.quantity += quantity;
+    } else {
+        cart.push({ id: itemId, quantity});
+    }
+    saveCart(cart);
+}
+
+export function removeFromCart(itemId: number): Cart[] {
+    const cart = getCart();
+    const updated = cart.filter(item=> item.id !== itemId);
+    saveCart(updated);
+    return updated;
+}
+
 localStorage.setItem('cart', JSON.stringify([
     {
         id: 3,
