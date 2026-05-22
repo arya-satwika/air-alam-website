@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
+import { getCart, saveCart } from "@/app/lib/cart";
 import type { Cart } from "@/app/lib/cart";
 
 interface CartItemProps {
@@ -14,23 +15,20 @@ export default function CartItem({ itemId, initialQuantity }: CartItemProps) {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    try {
-      const raw = localStorage.getItem("cart");
-      const parsed: Cart[] = raw ? JSON.parse(raw) : [];
-      setCartItems(parsed);
-    } catch (error) {
-      console.error("Failed to parse cart:", error);
-      setCartItems([]);
-    }
+    const cart = getCart();
+    setCartItems(cart);
     setIsLoaded(true);
   }, []);
+
+  
 
   const updateItemQuantity = (newQuantity: number) => {
     setCartItems((prev) => {
       const updated = prev.map((item) =>
         item.id === itemId ? { ...item, quantity: newQuantity } : item,
       );
-      localStorage.setItem("cart", JSON.stringify(updated));
+      // localStorage.setItem("cart", JSON.stringify(updated));
+      saveCart(updated);
       return updated;
     });
     setQuantity(newQuantity);
@@ -51,6 +49,7 @@ export default function CartItem({ itemId, initialQuantity }: CartItemProps) {
   if (!cartItems.some((item) => item.id === itemId)) {
     return <div>Item not found in cart</div>;
   }
+
   return (
     <div className="flex flex-col md:flex-row md:items-center gap-6">
       <div className="w-[120px] h-[120px] bg-[#f5f7fb] rounded-2xl flex items-center justify-center p-2">
