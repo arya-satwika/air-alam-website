@@ -57,6 +57,10 @@ export function removeFromCart(itemId: number): Cart[] {
     return updated;
 }
 
+export function clearCart(){
+    localStorage.removeItem("cart");
+}
+
 export function calculateTotal(cart: Cart[]): number {
     let total = 0;
     for (const item of cart) {

@@ -2,9 +2,9 @@
 export type transactionDetails = {
     gross_amount: number,
     order_id: string,
-    email: string,
-    name: string,
-    phone: string
+    email?: string,
+    name?: string,
+    phone?: string
 }
 
 const midtransClient = require('midtrans-client');
@@ -13,12 +13,33 @@ const snap = new midtransClient.Snap({
     serverKey : process.env.MIDTRANS_SERVER_KEY
 });
 
+type SnapParameter = {
+    payment_type: string;
+    transaction_details: {
+        gross_amount: number;
+        order_id: string;
+    };
+    "credit-card": {
+        secure: boolean;
+    };
+    callbacks: {
+        finish: string;
+    };
+    customer_details?: {
+        email?: string;
+        first_name?: string;
+        last_name?: string;
+        phone?: string;
+    };
+};
+
 // const serverKey = process.env.MIDTRANS_SERVER_KEY || '';
 // export const authHeader = Buffer.from(serverKey, 'utf-8').toString('base64');
 
 export async function paySnap(transactionDetails: transactionDetails): Promise<string> {
+    const appUrl = process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000";
 
-    let parameter = {
+    let parameter: SnapParameter = {
         "payment_type": "gopay",
         "transaction_details": {
             "gross_amount": transactionDetails.gross_amount,
@@ -27,15 +48,24 @@ export async function paySnap(transactionDetails: transactionDetails): Promise<s
         "credit-card":{
             "secure" : true
         },
-        "customer_details": {
-            "email": transactionDetails.email,
-            "first_name": transactionDetails.name,
-            "last_name": transactionDetails.name,
-            "phone": transactionDetails.phone
-        },
         "callbacks": {
-            "finish": "https://localhost:3000/landing"
-  }
+            "finish": `${appUrl}/landing?order_id=${encodeURIComponent(transactionDetails.order_id)}`
+        }
+    }
+    if (transactionDetails.email || transactionDetails.name || transactionDetails.phone) {
+        parameter = {
+            ...parameter,
+            "customer_details": {
+                ...(transactionDetails.email ? { "email": transactionDetails.email } : {}),
+                ...(transactionDetails.name
+                    ? {
+                        "first_name": transactionDetails.name,
+                        "last_name": transactionDetails.name
+                    }
+                    : {}),
+                ...(transactionDetails.phone ? { "phone": transactionDetails.phone } : {})
+            }
+        };
     }
     // core.charge(parameter)
     // .then((response: any) => {

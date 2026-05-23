@@ -1,10 +1,11 @@
-'use client';
+"use client";
 import { useEffect, useState } from "react";
 import CartList from "@/components/CartList";
 import { paySnap } from "@/app/lib/paySnap";
 import { redirect } from "next/navigation";
-import { calculateTotal, getCart } from "@/app/lib/cart";
+import { calculateTotal, getCart, clearCart } from "@/app/lib/cart";
 import type { Cart } from "@/app/lib/cart";
+import Link from "next/dist/client/link";
 
 export default function CheckoutPage() {
   const [cart, setCart] = useState<Cart[]>([]);
@@ -28,8 +29,34 @@ export default function CheckoutPage() {
       phone: phone,
     };
     const redirectUrl = await paySnap(transactionDetails);
-    redirect(redirectUrl);
     console.log("Redirect URL:", redirectUrl);
+    clearCart();
+
+    redirect(redirectUrl);
+  }
+
+  if (cart.length === 0) {
+    return (
+      <main className="min-h-screen bg-gradient-to-b from-sky-50 via-white to-white px-6 py-20">
+        <section className="mx-auto flex w-full max-w-3xl flex-col items-center rounded-[32px] border border-sky-100 bg-white p-10 text-center shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
+          <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-sky-100 text-[#2196F3]">
+            <span className="material-icons-round text-[40px]">shopping_cart</span>
+          </div>
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-red-400">
+            Keranjang Kosong
+          </p>
+          <h1 className="text-3xl font-extrabold text-slate-900 sm:text-4xl">
+            Anda belum menambahkan produk ke keranjang.
+          </h1>
+          <Link
+            href="/produk"
+            className="mt-8 inline-flex items-center justify-center rounded-full bg-sky-500 px-8 py-4 text-sm font-semibold text-white transition hover:bg-sky-600"
+          >
+            Lihat Produk
+          </Link>
+        </section>
+      </main>
+    );
   }
 
   return (
@@ -45,7 +72,7 @@ export default function CheckoutPage() {
         </div>
 
         <CartList />
-        
+
         <div className="bg-white rounded-[28px] shadow-sm border border-slate-100 p-6 mb-8">
           <div className="flex items-center gap-3 mb-6">
             <svg
@@ -89,53 +116,52 @@ export default function CheckoutPage() {
               id="emailInput"
             />
             <div className="bg-white rounded-[28px] shadow-sm border border-slate-100 p-6 col-span-3">
-          <h2 className="text-[26px] font-bold text-[#1b2433] mb-8">
-            Ringkasan Pembayaran
-          </h2>
-          <div className="space-y-6">
-            <div className="flex items-center justify-between">
-              <p className="text-[22px] text-[#64748B]">Subtotal</p>
-              <p className="text-[22px] text-[#64748B]" id="subTotal">
-                Rp {calculateTotal(cart).toLocaleString("id-ID")}
-              </p>
-            </div>
-            <div className="flex items-center justify-between">
-              <p className="text-[22px] text-[#64748B]">Ongkir</p>
-              <p className="text-[22px] text-[#64748B]" id="ongkir">
-                Rp 15.000
-              </p>
-            </div>
-            <div className="border-t border-slate-100 pt-6 flex items-center justify-between">
-              <h3 className="text-[28px] font-bold text-[#1b2433]">Total</h3>
-              <h3
-                className="text-[28px] font-extrabold text-[#2196F3]"
-                id="totalBiaya"
-              >
-                Rp {(calculateTotal(cart) + 15000).toLocaleString("id-ID")}
-              </h3>
-            </div>
+              <h2 className="text-[26px] font-bold text-[#1b2433] mb-8">
+                Ringkasan Pembayaran
+              </h2>
+              <div className="space-y-6">
+                <div className="flex items-center justify-between">
+                  <p className="text-[22px] text-[#64748B]">Subtotal</p>
+                  <p className="text-[22px] text-[#64748B]" id="subTotal">
+                    Rp {calculateTotal(cart).toLocaleString("id-ID")}
+                  </p>
+                </div>
+                <div className="flex items-center justify-between">
+                  <p className="text-[22px] text-[#64748B]">Ongkir</p>
+                  <p className="text-[22px] text-[#64748B]" id="ongkir">
+                    Rp 15.000
+                  </p>
+                </div>
+                <div className="border-t border-slate-100 pt-6 flex items-center justify-between">
+                  <h3 className="text-[28px] font-bold text-[#1b2433]">
+                    Total
+                  </h3>
+                  <h3
+                    className="text-[28px] font-extrabold text-[#2196F3]"
+                    id="totalBiaya"
+                  >
+                    Rp {(calculateTotal(cart) + 15000).toLocaleString("id-ID")}
+                  </h3>
+                </div>
 
-            <button
-              type="submit"
-              className="w-full h-[78px] rounded-full bg-[#dceeff] text-[#64748B] text-[22px] font-semibold mt-5 transition-all duration-300 cursor-pointer hover:bg-[#2196F3] hover:text-white"
-              id="bayarBtn"
-            >
-              Bayar Sekarang
-            </button>
+                <button
+                  type="submit"
+                  className="w-full h-[78px] rounded-full bg-[#dceeff] text-[#64748B] text-[22px] font-semibold mt-5 transition-all duration-300 cursor-pointer hover:bg-[#2196F3] hover:text-white"
+                  id="bayarBtn"
+                >
+                  Bayar Sekarang
+                </button>
 
-            <div className="w-full h-[78px] rounded-3xl bg-[#f3f7fb] flex items-center justify-center text-[20px] text-[#64748B]">
-              Estimasi pengiriman:{" "}
-              <span className="font-bold text-[#1b2433] ml-2">
-                2-3 hari kerja
-              </span>
+                <div className="w-full h-[78px] rounded-3xl bg-[#f3f7fb] flex items-center justify-center text-[20px] text-[#64748B]">
+                  Estimasi pengiriman:{" "}
+                  <span className="font-bold text-[#1b2433] ml-2">
+                    2-3 hari kerja
+                  </span>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-            
           </form>
         </div>
-
-       
       </section>
     </div>
   );

@@ -32,6 +32,15 @@ export default function CartList() {
         console.log("Cart items loaded:", getCart());
     }, []);
 
+    if (cartItems.length === 0) {
+        return (
+            <div className="bg-white rounded-[28px] shadow-sm border border-slate-100 p-6 mb-8">
+                <h2 className="text-[26px] font-bold text-[#1b2433] mb-8">Keranjang Anda Kosong</h2>
+                <p className="text-slate-500">Tambahkan produk ke keranjang Anda untuk melihatnya di sini.</p>
+            </div>
+        )
+    }
+
     return (
         <div>
             <div className="bg-white rounded-[28px] shadow-sm border border-slate-100 p-6 mb-8">
