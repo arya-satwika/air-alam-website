@@ -19,7 +19,7 @@ export type ProductDetail = {
 
 export const products: ProductDetail[] = [
   {
-    slug: "airalam-220ml",
+    slug: "0",
     title: "AirAlam Mineral 220ml",
     size: "220ml",
     price: "Rp 1.800",
@@ -48,7 +48,7 @@ export const products: ProductDetail[] = [
     ],
   },
   {
-    slug: "airalam-330ml",
+    slug: "1",
     title: "AirAlam Mineral 330ml",
     size: "330ml",
     price: "Rp 3.500",
@@ -77,7 +77,7 @@ export const products: ProductDetail[] = [
     ],
   },
   {
-    slug: "airalam-600ml",
+    slug: "3",
     title: "AirAlam Mineral 600ml",
     size: "600ml",
     price: "Rp 5.500",
@@ -106,7 +106,7 @@ export const products: ProductDetail[] = [
     ],
   },
   {
-    slug: "airalam-1-5l",
+    slug: "4",
     title: "AirAlam Mineral 1.5L",
     size: "1.5L",
     price: "Rp 9.500",
@@ -135,7 +135,7 @@ export const products: ProductDetail[] = [
     ],
   },
   {
-    slug: "airalam-eco-plus",
+    slug: "2",
     title: "AirAlam Eco+ 500ml",
     size: "Eco+ 500ml",
     price: "Rp 10.000",
@@ -164,7 +164,7 @@ export const products: ProductDetail[] = [
     ],
   },
   {
-    slug: "airalam-galon-19l",
+    slug: "5",
     title: "AirAlam Galon 19L",
     size: "Galon 19L",
     price: "Rp 28.000",

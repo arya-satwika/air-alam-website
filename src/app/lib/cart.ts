@@ -25,18 +25,21 @@ export function getCart(): Cart[] {
     try {
         const raw = localStorage.getItem("cart");
         return raw ? JSON.parse(raw) : [];
-    } catch (error) {
-        console.log("Failed to parse cart:", error);
+    } catch {
         return [];
     }
 }
 
 export function saveCart(cart: Cart[]): void{
     localStorage.setItem("cart", JSON.stringify(cart));
+    if (typeof window !== "undefined") {
+        window.dispatchEvent(new Event("cart-updated"));
+    }
 }
 
 export function addToCart(itemId: number, quantity: number): void {
     const cart = getCart();
+    console.log(cart);
     const exisItem = cart.find(item => item.id === itemId);
 
     if (exisItem) {
@@ -52,4 +55,13 @@ export function removeFromCart(itemId: number): Cart[] {
     const updated = cart.filter(item=> item.id !== itemId);
     saveCart(updated);
     return updated;
+}
+
+export function calculateTotal(cart: Cart[]): number {
+    let total = 0;
+    for (const item of cart) {
+        const itemData = items[item.id ];
+        total += itemData ? itemData.price * item.quantity : 0;
+    }
+    return total;
 }

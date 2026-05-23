@@ -1,7 +1,10 @@
 'use server'
 export type transactionDetails = {
     gross_amount: number,
-    order_id: string
+    order_id: string,
+    email: string,
+    name: string,
+    phone: string
 }
 
 const midtransClient = require('midtrans-client');
@@ -25,11 +28,14 @@ export async function paySnap(transactionDetails: transactionDetails): Promise<s
             "secure" : true
         },
         "customer_details": {
-            "first_name": "budi",
-            "last_name": "pratama",
-            "email": "budi.pra@example.com",
-            "phone": "08111222333"
-        }
+            "email": transactionDetails.email,
+            "first_name": transactionDetails.name,
+            "last_name": transactionDetails.name,
+            "phone": transactionDetails.phone
+        },
+        "callbacks": {
+            "finish": "https://localhost:3000/landing"
+  }
     }
     // core.charge(parameter)
     // .then((response: any) => {

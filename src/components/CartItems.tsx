@@ -3,13 +3,15 @@
 import { useState, useEffect } from "react";
 import { getCart, saveCart, items } from "@/app/lib/cart";
 import type { Cart } from "@/app/lib/cart";
+import Image from "next/image";
 
 interface CartItemProps {
   itemId: number;
   initialQuantity: number;
+  imageSrc: string;
 }
 
-export default function CartItem({ itemId, initialQuantity }: CartItemProps) {
+export default function CartItem({ itemId, initialQuantity, imageSrc }: CartItemProps) {
   const [cartItems, setCartItems] = useState<Cart[]>([]);
   const [quantity, setQuantity] = useState(initialQuantity);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -22,6 +24,7 @@ export default function CartItem({ itemId, initialQuantity }: CartItemProps) {
 
   const currentItem = items[itemId];
   if (!currentItem) {
+    console.log(`Item with ID ${itemId} not found in items list.`);
     return <div>Item not found</div>;
   }
   
@@ -31,7 +34,6 @@ export default function CartItem({ itemId, initialQuantity }: CartItemProps) {
       const updated = prev.map((item) =>
         item.id === itemId ? { ...item, quantity: newQuantity } : item,
       );
-      // localStorage.setItem("cart", JSON.stringify(updated));
       saveCart(updated);
       return updated;
     });
@@ -56,11 +58,13 @@ export default function CartItem({ itemId, initialQuantity }: CartItemProps) {
 
   return (
     <div className="flex flex-col md:flex-row md:items-center gap-6">
-      <div className="w-[120px] h-[120px] bg-[#f5f7fb] rounded-2xl flex items-center justify-center p-2">
-        <img
-          src="https://placehold.co/80x80"
+      <div className="w-[120px] h-[200px] bg-[#f5f7fb] rounded-2xl flex items-center justify-center p-2">
+        <Image
+          src={imageSrc}
           alt="produk"
-          className="w-full h-full object-contain"
+          width={300}
+          height={300}
+          className="w-full h-full object-cover rounded-2xl"
         />
       </div>
       <div className="flex-1">

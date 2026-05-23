@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SiteFooter } from "@/components/site-shell";
-import { products } from "./product-data";
+import { products } from "../lib/product-data";
 
 export const metadata = {
   title: "AirAlam - Produk",
