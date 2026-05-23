@@ -74,6 +74,16 @@ export default function Navbar() {
         >
           Kontak
         </Link>
+        <Link
+          href="/checkout"
+          className={`text-sm font-medium transition-colors duration-200 ${
+            pathname === "/checkout"
+              ? "text-[#1a8fe3]"
+              : "text-[#4a5568] hover:text-[#1a8fe3]"
+          }`}
+        >
+          Keranjang
+        </Link>
       </div>
     </div>
   );

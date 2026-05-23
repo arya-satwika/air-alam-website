@@ -44,14 +44,3 @@ export function removeFromCart(itemId: number): Cart[] {
     saveCart(updated);
     return updated;
 }
-
-localStorage.setItem('cart', JSON.stringify([
-    {
-        id: 3,
-        quantity: 2
-    },
-    {
-        id: 2,
-        quantity: 1
-    }
-]));
