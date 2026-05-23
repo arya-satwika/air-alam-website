@@ -6,11 +6,11 @@ import Image from "next/image"
 
 export default function CheckoutPage() {
     function addDummyCartItems() {
-        const dummyCart = [
-            { id: 1, quantity: 2 },
-            { id: 2, quantity: 1 }
-        ]
-        localStorage.setItem('cart', JSON.stringify(dummyCart))
+        // const dummyCart = [
+        //     { id: 1, quantity: 2 },
+        //     { id: 2, quantity: 1 }
+        // ]
+        // localStorage.setItem('cart', JSON.stringify(dummyCart))
     }
 
 

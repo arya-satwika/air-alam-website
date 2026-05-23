@@ -12,6 +12,15 @@ export type Cart = {
     quantity: number
 }
 
+export const items = [
+    { name: "AirAlam 220ml", price: 1800 },
+    { name: "AirAlam 330ml", price: 3500 },
+    { name: "AirAlam 500ml", price: 10000 },
+    { name: "AirAlam 600ml", price: 5500 },
+    { name: "AirAlam 1.5l", price: 9500 },
+    { name: "AirAlam 19l", price: 28000 },
+]
+
 export function getCart(): Cart[] {
     try {
         const raw = localStorage.getItem("cart");
