@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { getCart, saveCart } from "@/app/lib/cart";
+import { getCart, saveCart, items } from "@/app/lib/cart";
 import type { Cart } from "@/app/lib/cart";
 
 interface CartItemProps {
@@ -20,6 +20,10 @@ export default function CartItem({ itemId, initialQuantity }: CartItemProps) {
     setIsLoaded(true);
   }, []);
 
+  const currentItem = items[itemId];
+  if (!currentItem) {
+    return <div>Item not found</div>;
+  }
   
 
   const updateItemQuantity = (newQuantity: number) => {
@@ -60,9 +64,11 @@ export default function CartItem({ itemId, initialQuantity }: CartItemProps) {
         />
       </div>
       <div className="flex-1">
-        <h3 className="text-[24px] font-bold text-[#1b2433]">AirAlam 600ml</h3>
+        <h3 className="text-[24px] font-bold text-[#1b2433]">
+          {currentItem.name}
+        </h3>
         <p className="text-[24px] font-extrabold text-[#2196F3] mt-3">
-          Rp 5.000
+          Rp {currentItem.price?.toLocaleString()}
         </p>
         <div className="flex items-center gap-5 mt-6">
           <span className="text-slate-500 text-[20px]">Jumlah:</span>

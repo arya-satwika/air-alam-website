@@ -5,13 +5,14 @@ import Image from "next/image"
 
 
 export default function CheckoutPage() {
-    // src logo bank
-    const bniLogo = "https://upload.wikimedia.org/wikipedia/commons/f/f0/Bank_Negara_Indonesia_logo_(2004).svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
-    const bcaLogo = "https://upload.wikimedia.org/wikipedia/commons/5/5c/Bank_Central_Asia.svg"
-    const mandiriLogo = "https://upload.wikimedia.org/wikipedia/commons/a/ad/Bank_Mandiri_logo_2016.svg"
-    const briLogo = "https://upload.wikimedia.org/wikipedia/commons/6/68/BANK_BRI_logo.svg"
-    const ovoLogo = "https://upload.wikimedia.org/wikipedia/commons/e/eb/Logo_ovo_purple.svg"
-    const shopeePayLogo = "https://upload.wikimedia.org/wikipedia/commons/0/0e/Shopee_logo.svg"
+    function addDummyCartItems() {
+        // const dummyCart = [
+        //     { id: 1, quantity: 2 },
+        //     { id: 2, quantity: 1 }
+        // ]
+        // localStorage.setItem('cart', JSON.stringify(dummyCart))
+    }
+
 
     return (
         <div className="bg-white/90">
