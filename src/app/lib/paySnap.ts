@@ -37,7 +37,7 @@ type SnapParameter = {
 // export const authHeader = Buffer.from(serverKey, 'utf-8').toString('base64');
 
 export async function paySnap(transactionDetails: transactionDetails): Promise<string> {
-    const appUrl = "air-alam.netlify.app";
+    const appUrl = process.env.NEXT_PUBLIC_APP_URL || "https://air-alam.netlify.app";
 
     let parameter: SnapParameter = {
         "payment_type": "gopay",
@@ -49,7 +49,7 @@ export async function paySnap(transactionDetails: transactionDetails): Promise<s
             "secure" : true
         },
         "callbacks": {
-            "finish": `${appUrl}/landing`
+            "finish": `${appUrl}/landing?order_id=${encodeURIComponent(transactionDetails.order_id)}`
         }
     }
     if (transactionDetails.email || transactionDetails.name || transactionDetails.phone) {
