@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { addToCart } from "@/app/lib/cart";
 import type { ProductDetail } from "@/app/lib/product-data";
+import Link from "next/link";
+
 
 export default function ProductCard({ product }: { product: ProductDetail }) {
   function handleAddToCart() {
@@ -54,13 +56,14 @@ export default function ProductCard({ product }: { product: ProductDetail }) {
               </ul>
             </div>
 
-            <button
+            <Link 
+              href="/checkout"
               onClick={handleAddToCart}
               className="mt-8 inline-flex items-center gap-2 rounded-full bg-slate-900 px-7 py-4 text-lg font-bold text-white transition hover:-translate-y-1 hover:bg-sky-700"
             >
               Pesan Sekarang
               <span className="material-icons-round text-[20px]">east</span>
-            </button>
+            </Link>
           </div>
         </div>
       </section>
