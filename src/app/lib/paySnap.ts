@@ -49,7 +49,7 @@ export async function paySnap(transactionDetails: transactionDetails): Promise<s
             "secure" : true
         },
         "callbacks": {
-            "finish": `${appUrl}/landing?order_id=${encodeURIComponent(transactionDetails.order_id)}`
+            "finish": `${appUrl}/landing`
         }
     }
     if (transactionDetails.email || transactionDetails.name || transactionDetails.phone) {
