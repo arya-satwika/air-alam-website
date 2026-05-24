@@ -37,7 +37,7 @@ type SnapParameter = {
 // export const authHeader = Buffer.from(serverKey, 'utf-8').toString('base64');
 
 export async function paySnap(transactionDetails: transactionDetails): Promise<string> {
-    const appUrl = process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000";
+    const appUrl = process.env.NEXT_PUBLIC_APP_URL || "air-alam.netlify.app";
 
     let parameter: SnapParameter = {
         "payment_type": "gopay",
